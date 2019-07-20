@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+		#calculator{
+			margin: 0 auto;
+			border: 4px solid black;
+			width: 300px;
+			height: 327px;
+		}
+		#calculator>div{
+			text-align: center;
+			font-size: 25px;
+			padding-top: 20px;
+			margin: 2px;
+			display: inline-block;
+			height: 12%;
+			width: 21%;
+			border: 2px solid black;
+
+		}
+		#display{
+			border:2px solid black;
+			width: 294px;
+			height: 40px;
+			position: absolute;
+			text-align: right;
+			font-size: 25px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="calculator">
+		<input type="text" id="display" disabled ><div style="top:3px;
+		left:3px;position: relative;width: 30px;height: 28px;padding-top: 2px;" id="delete" class="buttons">C</div><br><br>
+		<div class="buttons"id="7">7</div>
+		<div class="buttons"id="8">8</div>
+		<div class="buttons"id="9">9</div>
+		<div class="buttons"id="divison">÷</div><br>
+		<div class="buttons"id="4">4</div>
+		<div class="buttons"id="5">5</div>
+		<div class="buttons"id="6">6</div>
+		<div class="buttons"id="multiply">*</div><br>
+		<div class="buttons"id="1">1</div>
+		<div class="buttons"id="2">2</div>
+		<div class="buttons"id="3">3</div>
+		<div class="buttons"id="minus">-</div><br>
+		<div class="buttons"id="0">0</div>
+		<div class="buttons"id="dot">.</div>
+		<div class="buttons"id="equal">=</div>
+		<div class="buttons"id="plus">+</div>
+	</div>
+	<script type="text/javascript">
+		let main = document.getElementById('calculator');
+		let buttons = main.getElementsByTagName('div');
+		let display = document.getElementById('display');
+		document.body.onload = function(){display.value = "";}
+		let resultCheck = false;
+		let dotAllow = true;
+
+
+		for(let i of buttons){
+			if(i.id ==="delete"){
+				i.onclick = () => {display.value = "";
+				dotAllow = true
+			resultCheck = false;}
+				
+			}
+			else if(i.id ==="divison"){
+				i.onclick = () => {
+					if(display.value.length <=8 && !display.value.endsWith("/") && !display.value.endsWith("+") && !display.value.endsWith("-") && !display.value.endsWith("*") && display.value !=="" && !display.value.endsWith("."))
+					display.value += "/"; 
+					dotAllow = true;
+						}
+			}
+			else if(i.id ==="minus"){
+				i.onclick = () => {
+					if(display.value===""){
+						display.value = "-";
+					}
+					else if(display.value.length <=8 && !display.value.endsWith("/") && !display.value.endsWith("+") && !display.value.endsWith("-") && !display.value.endsWith("*") && display.value !==""
+						&& !display.value.endsWith(".")){
+							display.value += "-";
+							dotAllow = true;
+					}
+			}
+			}
+			else if(i.id ==="plus"){
+				i.onclick = () => {
+					if(display.value.length <=8 && !display.value.endsWith("/") && !display.value.endsWith("+") && !display.value.endsWith("-") && !display.value.endsWith("*") && display.value !=="" && !display.value.endsWith(".")){
+						display.value += "+";
+						dotAllow = true;
+					}
+				} 
+			}
+			else if(i.id ==="multiply"){
+				i.onclick = () => {
+					if(display.value.length <=8 && !display.value.endsWith("/") && !display.value.endsWith("+") && !display.value.endsWith("-") && !display.value.endsWith("*") && display.value !=="" && !display.value.endsWith(".")){
+						display.value += "*";
+						dotAllow = true;
+					}
+				} 
+			}
+			else if(i.id ==="dot"){
+				i.onclick = () => {
+					if(display.value.length <=8 && !display.value.endsWith("/") && !display.value.endsWith("+") && !display.value.endsWith("-") && !display.value.endsWith("*") && display.value !=="" && !display.value.endsWith(".") && dotAllow ){
+						display.value += ".";
+						dotAllow = false;	
+					}
+				} 
+			}
+			else if(i.id ==="equal"){
+				i.onclick = () => {
+				display.value = eval(display.value);
+				resultCheck = true;
+				dotAllow = true;}
+				
+			}
+			else{
+				i.onclick = () => {
+					if(resultCheck){
+					display.value = "";
+					}
+					if(display.value.length <=8 ){
+					display.value += i.innerHTML;
+					resultCheck = false;
+				}
+					}
+				
+			}
+		}
+
+		
+		
+	</script>
+</body>
+</html>
