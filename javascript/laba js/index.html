@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>laba JS</title>
+	
+</head>
+<body >
+	<script type="text/javascript">
+// 	//Задание JS1.
+	
+// 	document.write("Бучко Алексей Юрьевич<br>");
+// 	document.write("19<br>");
+// 	document.write("...<br>");
+
+// 	//Задание JS4.
+// 	var integer;
+// 	integer = 1;
+// 	string = "Hello";
+// 	alert(integer+string);
+
+// 	//Задание JS5.
+// 	var a = false;
+// 	var b = null;
+// 	var c ;
+// 	alert(a);	
+// 	alert(b);
+// 	alert(c);
+
+	
+// 	//Задание JS6
+// 	alert("Бучко Алексей Юрьевич\n19\n...");
+
+// 	//Задание JS7
+// 	var str1, str2, str3, concatention;
+// 	str1 = "Кто ";
+// 	str2 = "ты ";
+// 	str3 = "такой?<br>";
+// 	concatention = str1+str2+str3;
+// 	document.write(concatention);
+	
+
+// 	//Задание JS8
+// 	var str = "20";
+// 	var a = 5;
+// 	document.write(str + a + "<br/>");
+//  	document.write(str - a + "<br/>");
+//  	document.write(str * "2" + "<br/>"); 
+//  	document.write(str / 2 + "<br/>");
+
+//  	//Задание JS12
+//  	var a1, b1;
+//  	a1 = prompt('Введите первый катет',0);
+//  	b1 = prompt('Введите второй катет',0);
+//  	square = (1/2 *  (a1*b1));
+//  	document.write(++square + "<br>");
+
+//  	//Задание JS9
+//  	str1 = "строка1";
+//  	str2 = "строка2";
+//  	concatention1 = str1+str2;
+//  	a1 = 3.14
+//  	b1 = 0xFF;
+//  	product1 = a1 * b1;
+//  	alert(concatention1);
+//  	alert(product1);
+
+//  	//Задание JS10
+//  	var x = prompt("Введите значение x ", "0");
+//  	var y = prompt("Введите значение y ", "0.0"); 
+//  	var integerX = parseInt(x);
+// 	var floatY = parseFloat(y);
+// 	var result = integerX + floatY;
+// 	document.write(result+"<br>");
+
+// 	//Задание JS11.1
+// 	var userName = prompt("Введите ваше имя");
+// 	document.write("Привет, "+userName+"!"+"<br>");
+// 	var firstNum = prompt("Введите превое число",0);
+// 	var secondNum = prompt("Введите второе число",0);
+// 	var result1 = parseInt(firstNum)+ parseInt(secondNum);
+// 	document.write(result1+"<br>");
+
+// 	//Задание JS11.2
+// 	var x = prompt("Введите х ", 0);
+// 	solution = (x ** 2 - 7*x + 10)/(x ** 2 - 8 * x + 12);
+// 	alert(solution);
+
+// 	//Задание JS12
+// 	password = "9583";
+// 	var message; 
+// 	if(password == 9583 || password == 1747){
+// 		message = "Доступ к А, B, C";
+// 	}else if(password == 3331|| password == 7922){
+// 		message = "Доступ к B, C";
+// 	}
+// 	else if(password == 9455 || password == 8977){
+// 		message = "Доступ к C";
+// 	}
+// 	else message = "Нет доступа";
+
+// 	//Задание JS13
+// 	var userName1 = prompt("Введите имя");
+// 	if(userName1){
+// 		document.write("Привет, "+ userName1 + "!"+"<br>");
+// 	}
+// 	else document.write("Привет, незнакомец!"+"<br>");
+
+// 	//Задание JS14
+// 	var a = 1,b = 2,max;
+// 	max = (a>b)?a:b;
+// 	document.write(max + "<br>");
+
+// 	//Задание JS15
+// 	var number = prompt("Введите число 1 или 2:");
+// 	number = parseInt(number);
+// 	 switch (number) {
+// 	case 1:
+// 	 document.write("Один"+"<br>");
+// 	 break;
+// 	case 2: 
+// 	document.write("Два"+"<br>"); 
+// 	break; 
+// 	default:
+// 	document.write("Вы ввели значение, отличное от 1 и 2"+"<br>");
+// }
+
+// 	//Задание JS17
+// 	var sum = 0;
+// 	for(var i = 1; i <=15;i++){
+// 		sum +=i;
+// 	}
+// 	document.write(sum+"<br>");
+
+// 	//Задание JS18
+// 	var sum = 0;
+// 	for(var i = 1; i <=15;i++){
+// 		if(i == 5 || i ==7) continue;
+// 		sum +=i;
+// 	}
+// 	document.write(sum+"<br>");
+
+// 	//Задание JS19
+// 	var ind = prompt("Введите тип тега инпут: 1 - текстовое поле, 2 - кнопка, 3 - radio");
+// 	var count = prompt("Введите количество тегов", 0);
+// 	var str = "";
+// 	count = parseInt(count);
+// 	ind = parseInt(ind);
+
+	
+// 	switch(ind){
+// 		case 1:
+// 		str = "<input type=\"text\">";
+// 		if(count>0){
+// 		for(var i = 0;i<count;i++){
+// 			document.write(str+"<br>");
+// 		}
+// 		}
+// 		break;
+// 		case 2: 
+// 		str = "<input type=\"button\">";
+// 		if(count>0){
+// 		for(var i = 0;i<count;i++){
+// 			document.write(str+"<br>");
+// 		}
+// 		break;
+// 		}
+// 		case 3:
+// 		str = "<input type=\"radio\">";
+// 		if(count>0){
+// 		for(var i = 0;i<count;i++){
+// 			document.write(str+"<br>");
+// 		}
+// 		break;
+// 		}
+// 		default:
+// 		document.write("Wrong number"+"<br>");
+// 	}
+
+
+// 	//Задание JS3_11
+// 	document.write("<table border=\"1\">");
+// 	for(var i = 0;i<9;i++){
+// 		document.write("<tr>");
+// 		for(var j=0;j<9;j++){
+// 		if(i%2==0){
+// 		if(j%2==1){
+// 		document.write("<td bgcolor=\"black\"></td>");
+// 	}
+// 	else document.write("<td></td>");
+// 	}
+
+// else {
+// 	if(j%2==0){
+// 		document.write("<td bgcolor=\"black\"></td>");
+// 	}
+// 	else document.write("<td></td>");
+	
+// }
+// }
+// 	document.write("</tr>");
+// 	}
+// 	document.write("</table>");
+
+// 	//Дополнительно к JS3_11
+// 	document.write("<table>");
+// 	for(var i = 1;i<=10;i++){
+// 		if(i==0)document.write("<tr bgcolor=\"red\">");
+// 		for(var j = 1;j<=10;j++){
+// 			document.write("<td >"+i*j+"</td>");
+// 	}
+
+// 		document.write("</tr>");
+// 	}
+
+// 	document.write("</table>");
+// 	//Задание JS20 Выполнить возведение х в степень y, используя цикл while
+//  	 var x = 3, y = 1;
+//  	 var pow = 1;
+//   	while(y--) {
+//     pow *= x;
+//  	 }
+//  	 alert(pow);
+// 	//Задание JS21
+// 	var counter = prompt("Введите число");
+// 	var factorial = 1;
+// 	document.write("Факториал числа: " + counter + "! = ");
+// 	 do {
+// 	if (counter == 0) {
+// 	factorial = 1;
+// 	break; }
+// 	factorial *= counter;
+// 	counter = counter - 1; }
+// 	while (counter > 0); 
+// 	document.write(factorial);
+
+// 	//Задание JS22
+// 	do{
+// 		userName2 = prompt("Введите имя пользователя");
+// 	}while(!userName2);
+
+// 	//Задание JS23
+// 	do{
+// 	numerous = prompt("Загадайте число!)");
+// 	}
+// 	while(!numerous);
+// 	numerous = parseInt(numerous);
+
+// 	for(var i = 0;;i++){
+// 		guessedNumerous = prompt("Угадай число!");
+// 		if(guessedNumerous < numerous){
+// 			alert("Мало!");
+// 		}
+// 		else if(guessedNumerous > numerous){
+// 			alert("Много!");
+// 		}
+// 		if(guessedNumerous == numerous)  {
+// 			alert("В точку! Это:"+numerous);
+// 			break;
+// 		}
+// 	}
+	
+// 	//Задание JS4_1
+// 	var userTask = prompt("Введите математическое выражение",0);
+// 	userTask = eval(userTask);
+// 	alert(userTask);
+
+// 	//Задание JS24
+// 	function say() {
+// 	document.write("Вы здесь?" + "<br/>");
+// 	}
+// 	do { say();
+// 	povtor = confirm("Пройти заполнение еще раз?");
+// 	}while (povtor);
+
+// 	//Задание JS25
+// 	function f()
+// 	  {
+//     var x = prompt("Введите первое число:", 0);
+//     var y = prompt("Введите второе число:", 0);
+//     alert(x - y);
+//  	 }
+//  	 f();
+//  	 //Задание JS26
+//  	 function sayHi(name){
+//  	 	alert("Привет "+name);
+//  	 }
+//  	 name=prompt("Введите имя");
+//  	 func(name);
+//  	 //Задание JS27
+//  	 function f1(a,b,c){
+//  	 	if(a>b && a>c)return a;
+//  	 	 if(b>c && b>a)return b;
+//  	 	 else return c;
+//  	 }
+//  	 //Задание JS28
+//  	 var global = "Привет";
+//  	 function func(){
+//  	 	local = "Мир";
+//  	 }
+//  	 //Задание JS29
+//  	 function factor(numerous){
+//  	 	if(numerous)
+//  	 	return numerous*factor(numerous-1);
+//  	 	return 1;
+//  	 }
+//  	 //Задание JS30
+//  	 var arr1 = new Array("Украина","Россия","Беларусия");
+//  	 var arr2 = new Array(4000000,120000000,25000000);
+//  	 for(var i=0;i<arr1.length;i++){
+//  	 	document.write(arr1[i] + "-" + arr2[i]);
+//  	 }
+//  	 //Задание JS31
+//  	 var days = new Array("Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье");
+//  	 function week(day){
+//  	 	for(var i = 0;i<days.length;i++){
+//  	 		if(day===days[i])return i+1;
+//  	 	}
+//  	 }
+
+// //Задание JS32
+// Array1 = [1,2,3,4,5];
+// document.write(Array1.reverse());
+
+// //Задание JS33
+// Array2 = new Array('c’, 5, 2, ‘b’, 3, 1, 4, ‘a');
+// document.write(Array2.sort());
+// //Задание JS34
+// Array3 = new Array(1,2,3,4,5);
+// document.write(Array3.join("+"));
+// document.write("<br>");
+
+// //Задание JS35
+// Matrix = new Array(5);
+// for(var i=0;i<Matrix.length;i++){
+// 	Matrix[i]=new Array(5);
+// }
+// for(var i = 0;i < Matrix.length;i++){
+// 	for(var j = 0;j < Matrix.length;j++){
+// 		Matrix[i][j]=(Math.random()*10).toFixed();
+// 		if(Matrix[i][j] > -5 && Matrix[i][j] < 7)
+// 		document.write(Matrix[i][j]+"<br>");
+// 	}
+// 	document.write("<br>");
+// }
+
+	//Задание 6__1
+	function Staff(name,department,phone,salary){
+		this.name = name;
+		this.department = department;
+		this.phone = phone;
+		this.salary = salary;
+	}
+	staff = new Staff("Buchko","TEF","NeSkAjU",0);
+
+	//Задание 6__2
+	Staff.prototype.adress;
+
+	//Задание 36
+	function Touroperator(people,days,tariffs){
+		this.people = people;
+		this.days = days;
+		this.tariffs = tariffs;
+		this.showTouroperator = function(){
+			return people+" "+days+" "+tariffs;
+
+		}
+		this.count = function(){
+			return people*days*tariffs ;
+		}
+	}
+ 	tour = new Touroperator(5,10,200);
+ 	tour.showTouroperator();
+ 	tour.count();
+
+ 	//Задание 37
+ 	var staff = {
+ 		constructor:function(name,salary,phone){
+ 			this.name = name;
+ 			this.salary = salary;
+ 			this.phone = phone;
+ 		},
+ 		show:function(){
+ 			alert(name + salary + phone);
+ 		}
+ 	}
+ //	Задание 38
+ 	function Methodtitle(title,url,n) {
+ 			this.title = title||prompt("Set title","");
+ 			this.url = url|| prompt("Set url","");
+ 			this.n = n||prompt("Insert amount of sections.",0);
+ 			this.show = function(){
+ 				if(this.n){
+ 			document.write("<ul>");
+ 			for(var i = 0;i < this.n;i++){
+ 				this.url?document.write("<li><a href = \""+this.url+"\">"):document.write("<li><a href = \"#\">");
+ 			(this.title)?document.write(this.title+"</a></li>"):document.write("</a></li>");
+ 	}
+ 	document.write("</ul>");
+
+ 		}
+ 	}
+ 	}
+ 
+ obj = new Methodtitle();
+ obj.show();
+
+var option;
+// вывод всех свойств объекта navigator
+ for (option in navigator){
+document.write(option + ' : ' + navigator[option]+ ' <br />');
+}
+
+function userDetails (){
+document.write("Разрешение: " + screen.width + " x " + screen.height + "<br />"); document.write("Глубина цвета: " + screen.colorDepth + " x " + screen.height + "<br />");
+} userDetails();
+
+
+//Функция осуществляет поиск по шаблону в searchstr
+function searchForPattern(searchstr, pattern, REattributes, theResult) {
+//Создание объекта регулярного выражения
+var regExpObj = new RegExp(pattern,REattributes);
+//Заполнение поля результата результатами поиска
+theResult.value = regExpObj.exec(searchstr);
+}
+// Эта функция заменяет на replaceStr все вхождения шаблона в searchstr
+ function replacePattern(searchstr,replaceStr, pattern,REattributes,theResult)
+{
+//Создание объекта регулярного выражения
+var regExpObj = new RegExp(pattern,REattributes);
+//Заполнение поля результата результатами поиска.
+theResult.value = searchstr.replace(regExpObj,replaceStr);
+}
+// Эта функция очищает все поля страницы
+function clearFields(field1, field2, field3, field4, field5)
+{
+field1.value ="";
+field2.value ="";
+field3.value ="";
+field4.value ="";
+field5.value ="";
+}
+document.write("<form>");
+document.write("<p>ВВВ Компания спасибо за заказ! Пожалуйста, введите номер телефона</p>");
+document.write("<p style=\"margin-left:100px;\">Номер телефона:</p>");
+var check = ["495|632","[0-9]{3}","[0-9]{4}"];
+document.write("<input type =\"text\" pattern=\""+check[0]+"\">");
+document.write("<input type =\"text\" pattern=\""+check[1]+"\">");
+document.write("<input type =\"text\" pattern=\""+check[2]+"\">");
+document.write("<button class=\"btn btn-primary\" type=\"submit\">Принять</button>");
+document.write("<button class=\"btn btn-primary\" type=\"reset\">Отклонить</button>");
+document.write("</form>");
+
+//Задание40
+
+var now=new Date();
+var hours=now.getHours();
+var seconds= now.getSeconds();
+var minutes= now.getMinutes();
+if(minutes < 10){ 
+	minutes = "0"+minutes;
+} if(seconds < 10){
+	seconds = "0"+seconds;
+ }
+document.write("Текущее время: " + hours + ":" + minutes + ":" + seconds);
+
+//Задание 7_3
+
+var d = new Date();
+switch(d.getDay()){
+	case 1:alert("Понедельник");
+	break;
+	case 2:alert("Вторник");
+	break;
+	case 3:alert("It's Wednesday my dudes");
+	break;
+	case 4:alert("Четверг");
+	break;
+	case 5:alert("Пятница");
+	break;
+	case 6:alert("Суббота");
+	break;
+	case 7:alert("Воскресенье");
+	break;
+
+}
+
+//Задание 7_4
+
+
+function viewDate(n){
+var now = new Date();
+var nowMilli = now.getTime();
+
+var nowPlus = new Date(now.getFullYear(),now.getMonth(),now.getDate()+n);
+var milli = nowPlus.getTime();
+
+var summaMilli = nowMilli+milli;
+var itogMoment = new Date(summaMilli);
+var myDays = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
+var myMonths = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+ document.write("День недели: " + myDays[itogMoment.getDay()] +" ");
+  document.write("Число: " + itogMoment.getDate() +" ");
+  document.write("Месяц: " + myMonths[itogMoment.getMonth()] +" ");
+  document.write("Год: " + itogMoment.getFullYear() +" ");
+}
+do{
+var userDays = prompt("Введите количество дней:",0); 
+if(userDays >= 1 && userDays <= 1000 ){
+	viewDate(userDays);
+}
+else{
+	alert("Ошибка ввода! Попробуйте ещё раз");
+}
+}
+while(userDays<=1&&userDays>=1000);
+
+document.write("Размер окна браузера:"+document.body.clientHeight +" x "+ document.body.clientWidth);
+
+
+
+
+
+
+</script>
+<form >
+<p>Имя:</p><input type="text" id="name"><br>
+<p>кол-во пончиков:</p><input type="text" id="donuts"><br>
+<p>минут:</p><input type="text" id="pickupminutes"><br>
+<p>подитог:</p>	<input type="text" id="poditog"><br>
+<p>налог:</p><input type="text" id="tax"><br>
+<p>итог:</p><input type="text" id="itog"><br>
+<input type="submit" value="Заказать" onclick="placeOrder();">
+</form>
+<h3>Тестер регулярных выражений</h3> <form name="myForm">
+<table board=0>
+<tr align=right>
+<td>Строка поиска:</td>
+<td><input type="text" name="searchString" /></td>
+</tr>
+<tr align=right>
+<td>Строка замены:</td>
+<td> <input type="text" name="replaceString"/></td>
+</tr>
+<tr align=right>
+<td>Атрибуты:</td>
+<td><input type="text" name="REattributes"/><td>
+</tr>
+<tr align=right>
+<td>Образец: </td>
+<td><input type="text" name="pattern"/><td>
+</tr>
+</table>
+<br>
+<input type="button" value="Search for pattern" onClick="searchForPattern(searchString.value, pattern.value, REattributes.value, result)"> <input type="button" value="Replace pattern"
+onClick="replacePattern(searchString.value, replaceString.value, pattern.value,
+REattributes.value, result) ">
+<input type="button" value="Clear"
+onClick="clearFields(searchString, replaceString, pattern, REattributes, result)"> <br /><hr /><br> Result: <input type="text" name="result"/></form>
+  
+<!-- Задание JS2 -->	
+<!-- <h1>Приветствие!</h1>
+	<script type="text/javascript">
+		document.write("Hello, JavaScript");
+	</script>
+	<input type="text"> -->
+
+<!--Задание 44-->
+<img src="1.png" alt="">
+<img src="1.png" alt="">
+<img src="1.png" alt="">
+<img id="smileImg" src="2.png" alt="" onclick="sayHello()">
+<br> <a href="/" onmouseover="document.bgColor='green' ">Зеленый</a>
+<br> <a href="/" onmouseover="document.bgColor='seagreen' ">Дрисня с капустой</a>
+<br> <a href="/" onmouseover="document.bgColor='magenta' ">Вейпорвейв</a>
+<br> <a href="/" onmouseover="document.bgColor='purple' ">Дилдо</a>
+<br> <a href="/" onmouseover="document.bgColor='navy' ">Нави</a>
+<br> <a href="/" onmouseover="document.bgColor='royalblue' ">Королевскопидораский</a>
+<img id="rollover"src="2.png" alt="" onmouseover="loadNewImgMouseOver()" onmouseout="loadNewImgMouseOut()">
+
+<form action="mailto:address@domen.domen" onreset='document.getElementById("reset").value="Готово!"'>
+	 <input type="submit">
+	 <input id="reset"type="reset">
+</form>
+
+
+<script>
+	//Задание 42
+document.getElementById("name").value = "Алексей";
+document.getElementById("donuts").value = "0";
+document.getElementById("pickupminutes").value = "0";
+document.getElementById("poditog").value = "0";
+document.getElementById("tax").value = "0";
+document.getElementById("itog").value = "0";
+
+function placeOrder(){
+	if(document.getElementById("name").value==""){
+		alert("Извините, вы должны написать имя, прежде чем выполнить заказ");
+	}
+	else if(isNaN(document.getElementById("pickupminutes").value)||document.getElementById("pickupminutes").value==""){
+		alert("Вы должны ввести количество приготовления правильно");
+	}
+	else {
+		form.submit;
+	}
+}
+
+var allimg = document.getElementsByTagName("img");
+// for(var i = 0;i<allimg.length;i++){
+// 	allimg[i].style.width="300px";
+// 	allimg[i].style.height="300px";
+// 	allimg[i].style.border="3px solid red";
+// }
+function sayHello(){
+	userName=prompt("Как вас зовуц?");
+	if(userName){
+	alert("Привет, "+userName);
+	document.getElementById("smileImg").src = "3.jpg";
+}
+}
+function loadNewImgMouseOver(){
+	document.getElementById("rollover").src= "3.jpg";
+}
+function loadNewImgMouseOut(){
+		document.getElementById("rollover").src= "2.png";
+
+}
+</script>
+<!--js53-->
+<form action="" method="get" name="my">
+Сколько бит в 1 байте?
+<input type="text" id="answer" size="3"><br>
+<input name="b1" type="button" onclick="check()" value="Проверить"> </form>
+<script type="text/javascript">
+	function check(){
+		if(document.getElementById("answer").value==8){
+			alert("Ты чё сучара, ты чё?");
+		}
+		else{
+			alert("Тупое уёбище, йды дрочы!");
+		}
+	}
+</script>
+<!-- 10_2 -->
+<p id="kek">ebu Sabak vsegda gotov trahnutskotov</p>
+<input type='text' id='first' onchange="makeUpper(this)" value="zaloopa">
+<script type="text/javascript">
+	function makeUpper(t){
+		t.value = t.value.toUpperCase();
+	}
+</script>
+<img src="1.png" id="seat0" alt="" title="seat0"> 
+<img src="1.png" id="seat1" alt="" title="seat1"> 
+<img src="1.png" id="seat2" alt="" title="seat2">
+ <img src="1.png" id="seat3" alt="" title="seat3"><br>
+<input type="button" id="findseats" value="Определить свободные места">
+<script type="text/javascript">
+//инициализация мест
+function initSeats() { document.getElementById("seat0").alt="yes";
+document.getElementById("seat1").alt="no";
+document.getElementById("seat2").alt="no";
+document.getElementById("seat3").alt="yes";
+}
+// функция отображения состояния мест: занято или свободно
+function showSeatStatus(num){
+if (document.getElementById("seat"+num).alt=="yes")
+{alert ("свободно")} else
+{alert ("занято")}
+}
+// Поиск свободных мест среди всех возможных
+function findSeats() {
+var i = 0;
+// Проверяем, свободно ли текущее место 
+for(i;i<=document.getElementsByTagName("img").length;i++)
+if (document.getElementById("seat"+i).alt=="yes")
+{
+document.getElementById("seat"+i).style.border="5px #999 solid";
+} }
+window.onload = function() {
+//связываем функцию findSeats() с событием onclick при помощи ссылки. ... 
+document.getElementById("findseats").onclick=findSeats;
+//связываем события onclick изобр-й с запуском функции 
+document.getElementById("seat0").onclick = function(){showSeatStatus(0);}
+document.getElementById("seat1").onclick = function(){showSeatStatus(1);}
+document.getElementById("seat2").onclick = function(){showSeatStatus(2);}
+document.getElementById("seat3").onclick = function(){showSeatStatus(3);}
+
+//запускаем функцию инициализации мест
+initSeats();
+}
+</script>
+<input type="text" size="30" onfocus='javascript:this.select();'> <textarea rows="3" cols="50" onfocus='javascript:this.select();'> </textarea>
+<script type="text/javascript">
+	function displayPicture(){
+var myWin=window.open("","bigPic"); // open - метод создания и открытия нового окна
+//myWin.document.open();
+//myWin.focus(); // переносим фокус в новое окно
+
+  
+myWin.document.write("<h1>Большое фото</h1><img src='Фото026.jpg'>"); // добавляем теги в новое окно
+}
+//myWin.document.close(); // закрываем окно
+</script>
+<a href="javascript: displayPicture()">
+<img src="Фото026.jpg" width="300" alt="увеличить" /> </a>
+<!--js11_4-->
+<script type="text/javascript">
+	function validateNonEmpty(inputField) { // Проверка на наличие текста
+if (inputField.value.length == 0) {
+// Сообщаем пользователю, что данные не введены alert("Заполните поле.");
+alert("thefuuuck???");
+}
+return true; }
+function checkAll() { for(var i=1;i<=4;i++){
+document.getElementById("t"+i).value="Залупосос";
+} }
+</script>
+<form name="f1">
+Ваше имя:<br>
+<input type="text" id="t1" onblur="validateNonEmpty(this)"> <input type="text" id="t2" onblur="validateNonEmpty(this)"> <input type="text" id="t3" onblur="validateNonEmpty(this)"> <input type="text" id="t4" onblur="validateNonEmpty(this)"> 
+<input id="b1" type="button" onclick="checkAll()">
+<input type="submit" name="">
+</form><form action="" name="form1">
+	В жопу дашь или мать продашь?
+<input type="checkbox" id="c1">Жопа не даётся 
+<input type="checkbox" id="c2">Мать не продаётся
+<input type="checkbox" onclick="azaza()" id="c3 ">и то и другое
+<input type="button" value="Проверка" onclick="checkmom()">
+</form>
+<script type="text/javascript">
+	function checkmom(){
+		if(document.getElementById("c1").checked&&document.getElementById("c2").checked&&!document.getElementById("c3").checked){
+			alert("Вор в законе!");
+		}
+		 else if ( (document.getElementById("c1").checked || document.getElementById("c2").checked)&&!document.getElementById("c3").checked){
+			alert("Что-то забыл!");
+	}
+		else if(document.getElementById("c3").checked){
+			alert("Петуха повели!");
+		}
+		else{
+			alert("Неправильно блядь!");
+		}
+		}
+</script>
+<form action="" name="form2">
+	каков заряд єлектрона?
+	 otricala<input type="radio" name="rr" id="r1" value="Отрицательній">
+	 polojila<input type="radio" name="rr" id="r2" value="Положительній">
+	<input type="button" onclick="check2()">
+</form>
+<script type="text/javascript">
+	function check2(){
+		if(document.form2.r1.checked){
+			alert("Правильно")
+		}
+		else{
+			alert("А подумать?")
+		}
+	}
+	//window.onresize = function message() {alert("Размер окна изменен!");}
+</script>
+<!-- js58 -->
+<input type="text" id="tt1"> <br>
+<select id="menu1" onchange="enter()"> 
+	<option value="1">1</option>
+	 <option value="2">2</option> 
+	 <option value="3">3</option>
+</select>
+<script>
+	function enter(){
+		document.getElementById("tt1").value = document.getElementById("menu1").value;
+	}
+</script>
+<!-- js59 -->
+В каких единицах измеряют работу?
+<form action="">
+<select  id="sel1">
+	<option value="jl">Джоули</option>
+	<option value="ml">Мулли</option>
+</select>
+<input type="button" value="Проверка" onclick="check3()">
+</form>
+<script type="text/javascript">
+	function check3(){
+		if (document.getElementById("sel1").value=="jl") {
+			alert("Right!");
+		}
+		else{
+			alert("Подумай!");
+		}
+	}
+</script>
+<form name="f12">
+ <select name="s1">
+<option value="РостовДон">Ростов-Дон</option> 
+<option value="Владимир">Владимир</option> 
+<option value="Москва">Москва</option>
+</select>
+<input type="button" onclick="myFunc()"> 
+</form>
+<script>
+	function myFunc(){
+		document.f12.s1.options[0].value="Ростов-на-Дону";
+		document.f12.s1.options[0].text="Ростов-на-Дону";
+	}
+</script>
+<form id="fr1">
+<select onchange="myFunc2()" multiple>
+<option>Карандаши 
+<option>Авторучки 
+<option>Линейки 
+<option>Тетради
+<option>Стерки
+<option>Кнопки
+</select>
+Выбраны позиции:
+<input name="s1" size="7" maxlength="7"> </form>
+<script>
+	var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [ 
+        "Let It Rock", 
+        "You Give Love a Bad Name" 
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [ 
+        "1999", 
+        "Little Red Corvette" 
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+  if(prop != "tracks" && value !=""){
+    collection[id][prop] = value;
+  }
+  else if(prop == "tracks" && value !=""){
+    if(collection[id].hasOwnProperty(prop)){
+    collection[id][prop].push(value);}
+    else{
+      collection[id]["tracks"] = value;
+    }
+  }
+  else if(value ==""){
+    delete collection[id][prop];
+  }
+  return collection;
+}
+
+// Alter values below to test your code
+updateRecords(5439, "tracks", "Take a Chance on Me");
+alert(collection["5439"].tracks);
+</script>
+
+<canvas style="background-color: red;">
+	
+</canvas>
+</body>
+</html>

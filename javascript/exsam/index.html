@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+</head>
+<style>
+	.container{
+		display: grid;
+		width: 100%;
+		height: 1000px;
+		text-align: center;
+		grid-template-rows: 0.5fr 1.5fr 0.5fr 0.5fr;
+		grid-gap:20px;
+		grid-template-areas: "header header"
+								"main sidebar"
+								"footer footer";
+	}
+	header{
+background-color: red;
+grid-area: header;
+	}
+	main{
+background-color: red;
+grid-area: main;
+	}
+	.sidebar{
+background-color: red;
+grid-area: sidebar;
+	}
+	footer{
+		background-color: red;
+		grid-area: footer;
+	}
+</style>
+<body>
+	<div class="container">
+		<header id="header">HEADER</header>
+		<main id="main">MAIN</main>
+		<div id="side"class="sidebar">SIDEBAR</div>
+
+		<footer id="footer">FOOTER</footer>
+
+	</div>
+</body>
+<script >
+	$(document).ready(function(){
+
+	$("#main").draggable({revert:true});
+
+	$("#side").droppable({accept:"main",drop:function(event,ui){ui.draggable.css("display","none");
+	$("#side").css("background-color","green");
+
+	$("#header").droppable({accept:"none"});
+
+	$("#main").droppable({accept:"none"});
+
+	$("#footer").droppable({accept:"none"});
+
+
+}});
+
+});
+</script>
+</html>

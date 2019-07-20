@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jq
+uery.min.js"></script>
+
+	<!-- 1. Подключим библиотеку jQuery (без нее jQuery UI не будет работать) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- 2. Подключим jQuery UI -->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<style>
+    /*#tabs li {
+     
+        background: #7DCA86;}
+        #tabs .active {
+  background: #FFF;
+  color: #000;
+  border-color: #7DCA86;
+}*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 30px;
+  font: 13px/1.4 Arial, sans-serif;
+}
+a {
+  color: #0094D6;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  padding: 7px 0;
+}
+h1 {
+  font-size: 21px;
+  font-weight: normal;
+  margin: 0 0 30px;
+}
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 25px;
+}
+body {
+  background: #F6F6F6;
+}
+.text {
+  max-width: 700px;
+  margin: 0 0 30px;
+  background: #FFF;
+  border: 2px solid #7DCA86;
+  border-radius: 5px;
+  padding: 7px 15px;
+  box-sizing: border-box;
+}
+
+.tabs {
+  max-width: 700px;
+  margin: 0 0 30px;
+}
+#tabs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  position: relative;
+  margin: -1px 0 0 -1px;
+}
+.tabs__caption li:last-child:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: -2px;
+  z-index: -1;
+  height: 5px;
+  background: #7DCA86;
+}
+.tabs__caption:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.tabs__caption li {
+  padding: 9px 15px;
+  margin: 1px 0 0 1px;
+  background: #61AF6A;
+  color: #FFF;
+  position: relative;
+  border: solid #61AF6A;
+  border-width: 2px 2px 0;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+#tabs li:not(.active) {
+  cursor: pointer;
+}
+#tabs li:not(.active):hover {
+  background: red;
+  border-color: #7DCA86;
+}
+#tabs .active {
+  background: red;
+  color: red;
+  border-color: #7DCA86;
+}
+#tabs .active:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #FFF;
+}
+#tabs {
+  
+  background: green;
+  border: 2px solid #7DCA86;
+  border-radius: 0 5px 5px 5px;
+  padding: 7px 15px;
+}
+#tabs .active {
+  display: block;
+}
+
+.vertical #tabs{
+  float: left;
+  display: block;
+}
+.vertical #tabs li {
+  float: none;
+  border-width: 2px 0 2px 2px;
+  border-radius: 5px 0 0 5px;
+}
+.vertical #tabs li:last-child:before {
+  display: none;
+}
+.vertical #tabs .active:after {
+  left: auto;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  width: 2px;
+  height: auto;
+}
+.vertical .tabs__content {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .tabs__caption li {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .vertical .tabs__caption {
+    float: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .vertical .tabs__caption li {
+    border-width: 2px 2px 0;
+    border-radius: 5px 5px 0 0;
+  }
+  .vertical .tabs__caption li:last-child:before {
+    display: block;
+  }
+  .vertical .tabs__caption .active:after {
+    top: auto;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 5px;
+    background: #FFF;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+	<!-- Задание 1.1  -->
+	<script>
+/*	$(document).ready(function(){
+   $("input").click(function(event){
+      alert("Поздравляем! Вы починили код!");
+});
+});*/
+</script>
+<input type="text" style="width: 20px ;height: 20px;">
+
+	<!-- Задание 2.1 -->
+	<script>
+		$(document).ready(function(){
+  
+     		$("div div").css("color","red");
+			//Пишите код здесь
+			$(document).ready(function(){
+			$("#meadow").css("color","red").css("font-size","20px");
+			$(".rainbow").css("color","red").css("font-size","20px");
+			$("#fut #future").css("color","purple").css("font-size","20px");
+			$("[set]").css("color","red").css("font-size","20px");
+			$("[last='code']").css("color","red").css("font-size","20px");
+		});
+});                   
+	</script>
+	<div id="wrap1">
+В тпд*кцлГ/ Щ34мть в-л <div style="display:inline">К</div>ову ку_у жззщш бтуш+щцтвл фстямц цзойц<span id="none">Ь</span>шев уывлц-дйжыщч в<span id="meadow">а</span>оПтмтущйзМчста вилуц ушЗс/тхй хфыО<span id="protect">ж</span>ыуе яыв<span class="rainbow">з</span>роц вварцжцду ул<span id="test">к</span>шу тфвфлдоцу уещкоу+ш лсоа<div id="fut">влм.цщу<span id="future">а</span>мтвлОЛдву влуйд</div>цу ушо всбр.фвцу щц<span id="sec">у</span>ш осл/влоцюбь лц<span set id="bear">н</span>дуо юсфыд.лоцу рвла ушусть фываждлц гщушс сть.ущш тсьЦцовл сбфвы вос+длов цуз<span id="beck" last="code">ь</span>йхВяс с. вцуш стьяьбв цудкощ з<span id="beck" last="none">в</span>о жыоыфв цщфзф язвсояловы выосяьт сь юяузо ыться хшуццяж воалфыао фждво цзущкш сялджо</div>                           
+<!--Задание селекторы-->          
+<script type="text/javascript">   
+$(document).ready(function(){
+
+$("#pmtog").css("color","green");
+$("p.pr1").css("color","red");
+$(":button").css("color","orange");
+$(".pmb1").css("color","blue");
+$(".pmb2").css("color","blue");
+$(".pmb3").css("color","blue");
+$("#wrap1 .pmtobr").css("color","brown");
+$("[src='mountimg3.jpg']").css("borderStyle","solid");
+$("#iwrap [type='button']").css("color","red");
+$("#iwrap [type='submit']").css("color","red");
+//Пишите код здесь
+
+});                                           
+</script>        
+<p><b>Каждое задание отмеченное цифрой должно быть выполнено с помощью одной jQuery команды.</b></p>
+<hr />
+<p><b>1.</b></p>                                                        
+<p id="pmtog">Покрасьте меня в зеленый цвет.</p>
+<p><b>2.</b></p>
+<h3 class="pr1">Мой цвет не должен быть изменен.</h3>
+<p class="pr1">Покрасьте меня в красный цвет.</p>
+<p><b>3.</b></p>
+<input type="button" value="Покрасьте меня в оранжевый" />
+<br /><br />
+<input type="text" value="Мой цвет не должен быть изменен"/>
+<br /><br />
+<input type="submit" value="Мой цвет изменять не нужно"/>
+<br /><br />
+<p><b>4.</b></p>
+<p class="pmb1">Покрасьте меня в синий.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmb2">Покрасьте меня в синий.</p>
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmb3">Покрасьте меня в синий.</p>
+<p><b>5.</b></p>
+<div id="wrap1">
+<p>Мой цвет не должен быть изменен.</p>
+<p class="pmtobr">Покрасьте меня в коричневый.</p>
+</div>
+<p class="pmtobr">Мой цвет не должен быть изменен.</p>
+<p><b>6. Отобразите рамку вокруг третьего (слева) изображения. (Используйте команду css("borderStyle","solid")</b></p>
+<img src="mountimg3.jpg" style="width:200px;">
+<img src="mountimg1.jpg" style="width:200px;">
+<img src="mountimg2.jpg" style="width:200px;">
+<p><b>7. </b></p>
+<div id="iwrap">
+<input type="button" value="Покрасьте меня в красный" />
+<br /><br />
+<input type="text" value="Мой цвет не должен быть изменен"/>
+<br /><br />
+<input type="submit" value="Покрасьте меня в красный"/>
+</div>
+
+<!-- Задание Обработчик событий-->
+<script type="text/javascript">   
+$(document).ready(function(){
+  
+$("#but1").click(function(){
+$("#par1").css("color","green").css("font-size","20px");
+});
+$("#but1").dblclick(function(){
+$("#par1").css("color","").css("font-size","");
+});
+
+$("#href1").mouseover(function(){
+$("#href1").css("color","orange");
+});
+$("#href1").mouseout(function(){
+$("#href1").css("color","");
+});
+
+$("#text1").select(function(){
+$("#text1").css("color","red").css("font-size","20px");});
+
+
+$("#but2").toggle(function(){
+$("#par2").css("color","red").css("font-family","Times New Roman");},function(){
+$("#par2").css("color","blue").css("font-family","arial");},
+function(){
+$("#par2").css("font-family","Verdana").css("font-weight","bold").css("border","solid").css("border-style","1px");}
+);
+
+//Пишите код здесь
+
+});                                           
+</script> 
+<p><b>1. После одинарного нажатия на кнопку с id="but1" цвет текста абзаца с id="par1" должен измениться на зеленый, а размер его шрифта должен стать равным 20px. При двойном нажатии на кнопку с id="but1" оформление абзаца с id="par1" должно сбрасываться на стандартное.</b></p>
+<div id="code">
+<h3 id="par1">Я первый заголовок на странице.</h3>
+<p id="par1">Я первый абзац на странице.</p>
+<input id="but1" type="button" value="Нажмите на меня" />
+</div>
+<p><b>2. При наведении указателя мыши на ссылку c id="href1" ее цвет должен измениться на оранжевый. При выведении указателя мыши за ее пределы оформление должно сбросится на стандартное.</b></p>
+<div id="code">
+<a id="href1" href="http://www.wisdomweb.ru/">wisdomweb.ru</a>
+</div>
+<p><b>3. При выделении текста элемента с id="text1" его цвет должен измениться на красный, а размер шрифта должен стать равным 20px.</b></p>
+<div id="code">
+<input type="text" id="text1" value="Выделите мой текст" />
+</div>
+<p><b>4. При каждом щелчке по кнопке с id=but2 оформление абзаца с id=par2 должно меняться следующим образом:</b></p>
+<ul>
+<li>Текст должен быть отображен шрифтом Times New Roman красного цвета;</li>
+<li>Текст должен быть отображен шрифтом Arial синего цвета;</li>
+<li>Текст должен быть отображен жирным шрифтом Verdana, с рамкой толщиной 1 пиксель (<i>используйте свойство font-weight:bold для того, чтобы сделать текст 
+жирным и свойство border-style для задания толщины границы</i>)</li>
+</ul>
+<div id="code">
+<p id="par2">Мое оформление будет меняться после каждого нажатия на кнопку ниже.</p>
+<input id="but2" type="button" value="Изменить оформление абзаца" />
+</div>
+
+<!-- Задание Эффекты-->
+<script type="text/javascript">
+	$(document).ready(function(){
+
+//Пишите код здесь
+$("#but1").click(function(){
+$("#par1").fadeOut(1500);});
+$("#but2").click(function(){
+$("#par1").fadeIn(1500);});
+
+$("#par2").mouseover(function(){$("#par2").fadeTo(3000,0.2);});
+$("#par2").mouseout(function(){$("#par2").fadeTo(3000,1);});
+
+$("#but3").click(function(){$("#wrap1").slideUp(5000);});
+$("#but4").click(function(){$("#wrap1").slideDown(7000);});
+
+$("#but5").click(function(){
+$("#redsquare").animate({left:200,top:10},2000);
+$("#redsquare").animate({left:400,top:100},2000);
+$("#redsquare").animate({left:500,top:300},2000);
+$("#redsquare").animate({left:200,top:300},2000);
+$("#redsquare").animate({left:50,top:100},2000);
+});
+
+
+});
+</script>
+<!-- Задание ДОМ-->
+
+<script type="text/javascript">   
+$(document).ready(function(){
+
+$("#but1").click(function(){
+$("#par2").html($("#par1").html())});
+
+$("#but2").click(function(){
+$("#par3").append("HTML.");
+$("#par4").prepend("CSS");
+$("#par5").prepend("JavaScript");
+$("#par6").prepend("jQuery");
+});
+
+$("#but3").click(function(){
+$("#href1").prepend($("#href1").attr("href"));
+$("#but3").after($("#par7").attr("class"));
+$(":text").after("key");
+});
+
+$("#but4").click(function(){
+$("#par8").wrap("<div id='style2'></div>");
+$("#par9").wrap("<div id='style3'></div>");
+$("#par10").wrap("<div id='style1'></div>");
+$("#par11").wrap("<div id='style4'></div>");
+});
+//Пишите код здесь
+
+});      
+</script>    
+<p><b>1. После нажатия на кнопку с id=but1 содержимое невидимого абзаца с id=par1 должно быть считано и вставлено в абзац с id=par2.</b></p>
+<div id="code">
+<p id="par1">Клад закопан в погребе дома №34 на улице Биттер Стрит в Лондоне.</p>
+<p id="par2">Вставьте в меня содержимое первого абзаца.</p>
+<input id="but1" type="button" value="Скопировать содержимое абзаца par1 в par2" />
+</div>
+<p><b>2. После нажатия на кнопку с id=but2 в абзацы par3, par4, par5 и par6 должны добавляться недостающие слова. Слова при вставке должны быть выделены жирным шрифтом.</b></p>
+<div id="code">
+<p id="par3"> Для разметки веб-страниц используется - </p>
+<p id="par4"> - используется для оформления HTML страниц.</p>
+<p id="par5"> - предназначен для написания клиентских скриптов выполняющихся браузером.</p>
+<p id="par6"> - JavaScript библиотека значительно упрощающая написание кода.</p>
+<input id="but2" type="button" value="Добавить в абзацы выше недостающие слова" />
+</div>
+<p><b>3. После нажатия на кнопку с id=but3 элементы с id=href1, id=par7 и type=text должны стать оформленными соответственно своему содержимому.</b></p>
+<div id="code">
+<a id="href1" href="http://www.wisdomweb.ru/">Передо мной отображено значение моего атрибута href.</a> 
+<p id="par7" class="afterbutton"> После кнопки с id=but3 расположено значение моего атрибута class выделенное жирным шрифтом.</p>
+<input type="text" value="После данного элемента расположено слово 'key'" />
+<br /><br />
+<input id="but3" type="button" value="Оформить элементы" />
+
+</div>
+<p><b>4. После нажатия на кнопку с id=but4 элементы должны стать оформленными соответственно своему содержимому. 
+(Необходимые стили уже заданы нужно только обернуть абзацы в тэги с соответствующими id: style1, style2, style3, style4.) </b></p>
+<div id="code">
+<p id="par8" >Текст этого элемента отображен жирным шрифтом Verdana.</p>
+<p id="par9" >Текст этого элемента отображен шрифтом красного цвета размером 20 пикселей.</p>
+<p id="par10" >Текст этого элемента отображен синим шрифтом Times New Roman.</p>
+<p id="par11" >Текст этого элемента отображен зеленым шрифтом Arial размером 25 пикселей.</p>
+<input id="but4" type="button" value="Применить оформление к абзацам" />
+</div>
+
+
+<!-- Задание CSS-->
+
+<script type="text/javascript">   
+$(document).ready(function(){
+
+$("#but1").click(function(){
+alert($("#par1").css("color")+$("#par2").css("color")+$("#par3").css("color"));
+});
+
+$("#but2").click(function(){
+$("#par4").css("color","red");
+$("#par5").css("font-size","25px");
+$("#par6").css({"font-family":"Veranda","font-size":"33px"});
+$("#par7").css({"font-family":"Times New Roman","font-size":"27px","color":"red"});
+});
+//Пишите код здесь
+
+});                                 
+</script>   
+<p><b>1. После нажатия на кнопку с id=but1 должно отобразится всплывающее окно содержащее значения CSS свойств color элементов с id=par1, id=par2 и id=par3.</b></p>
+<div id="code">
+<p id="par1"> Я первый абзац.</p>
+<p id="par2"> Я второй абзац.</p>
+<p id="par3"> Я третий абзац.</p>
+<p> </p>
+<input id="but1" type="button" value="Вывести цвет абзацев" />
+</div>
+<p><b>2. После нажатия на кнопку с id=but2 элементы должны стать оформленными согласно их содержимому.</b></p>
+<div id="code">
+<p id="par4">Текст этого элемента отображен красным шрифтом.</p>
+<p id="par5">Текст этого элемента отображен шрифтом размером 25 пикселей.</p>
+<p id="par6">Текст этого элемента отображен шрифтом Verdana размером 33 пикселя.</p>
+<p id="par7">Текст этого элемента отображен жирным шрифтом Times New Roman красного цвета размером 27 пикселей.</p>
+<input id="but2" type="button" value="Оформить элементы"/>
+</div>
+
+<!-- Задание AJAX-->
+
+<script type="text/javascript">   
+$(document).ready(function(){
+
+//Пишите код здесь
+$("#but1").click(function(){
+$("#par1").load("autumn.txt");
+});
+$("#but2").click(function(){
+$("#par1").load("winter.txt");
+});
+$("#but3").click(function(){
+$("#par1").load("summer.txt");
+});
+$("#but4").click(function(){
+$("#par1").load("spring.txt");
+});
+
+$("#but5").click(function(){
+$("#let1").load("secretword.php","horse=10");
+$("#let2").load("secretword.php","look=5&meadow=23");
+$("#let3").load("secretword.php","dew=6&mount=64");
+$("#let4").load("secretword.php","bond=24&march=40");
+$("#let5").load("secretword.php","wise=43&strong=4&curve=29");
+$("#let6").load("secretword.php","fast=31&clever=76&moon=20");
+});
+
+$("#but6").click(function(){
+$.ajax({url:"secretword.php",data:"horse=10",success:function(result){$("#slet1").html(result)}});
+$.ajax({url:"secretword.php",data:"look=5&meadow=23",success:function(result){$("#slet2").html(result)}});
+$.ajax({url:"secretword.php",data:"dew=6&mount=64",success:function(result){$("#slet3").html(result)}});
+$.ajax({url:"secretword.php",data:"bond=24&march=40",success:function(result){$("#slet4").html(result)}});
+$.ajax({url:"secretword.php",data:"wise=43&strong=4&curve=29",success:function(result){$("#slet5").html(result)}});
+$.ajax({url:"secretword.php",data:"fast=31&clever=76&moon=20",success:function(result){$("#slet6").html(result)}});
+});
+
+});             
+</script>           
+
+<p><b>1.Создайте AJAX запросы, которые должны после нажатия на соответствующие кнопки обращаться к файлам autumn.txt, winter.txt, summer.txt, и spring.txt и затем отображать результат выполнения запроса в абзац с id=par1.</b></p>
+<div id="code">
+<p id="par1">В данном абзаце будут отображены результаты запросов.</p>
+<input id="but1" type="button" value="Обратится к файлу autumn.txt" />
+<input id="but2" type="button" value="Обратится к файлу winter.txt" />
+<br /><br />
+<input id="but3" type="button" value="Обратится к файлу summer.txt" />
+<input id="but4" type="button" value="Обратится к файлу spring.txt" />
+</div>
+<p><b>2. При передаче скрипту secretword.php определенных комбинаций переменных перечисленных ниже он будет возвращать буквы кодового слова. После нажатия на кнопку с id=but5 элемент span c id=let1 должен содержать первую букву кодового слова, span c id=let2 вторую и т.д.</b></p>
+<div id="code">
+<ul>
+<li>Первая буква кодового слова будет возвращена если передать скрипту переменную horse со значением 10</li>
+<li>Вторая буква кодового слова будет отображена если передать скрипту переменные look и meadow со значениями 5 и 23.</li>
+<li>Третья буква кодового слова будет отображена если передать скрипту переменные dew и mount со значениями 6 и 64.</li>
+<li>Четвертая буква кодового слова будет отображена если передать скрипту переменные bond и march со значениями 24 и 40.</li>
+<li>Пятая буква кодового слова будет отображена если  передать скрипту переменные wise, strong и curve со значениями 43, 4 и 29.</li>
+<li>Шестая буква кодового слова будет отображена если  передать скрипту переменные fast, clever и moon со значениями 31, 76 и 20.</li>
+</ul>
+<p>Кодовое слово:<span id="let1"></span><span id="let2"></span><span id="let3"></span><span id="let4"></span><span id="let5"></span><span id="let6"></span></p>
+<input id="but5" type="button" value="Отобразить кодовое слово" />
+</div>
+<p><b>3. Выполните предыдущий пункт используя низкоуровневый метод .ajax(). После нажатия на кнопку с id=but6 элемент span c id=slet1 должен содержать первую букву кодового слова, span c id=slet2 вторую и т.д.</b></p>
+<div id="code">
+<p>Кодовое слово:<span id="slet1"></span><span id="slet2"></span><span id="slet3"></span><span id="slet4"></span><span id="slet5"></span><span id="slet6"></span></p>
+<input id="but6" type="button" value="Отобразить кодовое слово" />
+</div>
+<script type="text/javascript">$(document).ready(function(){
+
+   $("#tabs").tabs();
+
+});</script>
+
+
+});
+<!-- Задание UI-->
+
+<div id="tabs">
+<ul>
+<li><a href="#tabs-1">Медведь</a></li>
+<li><a href="#tabs-2">Белка</a></li>
+<li><a href="#tabs-3">Лисица</a></li>
+</ul>
+<div id="tabs-1">
+<p><b>Медведи</b> (<i>лат. Ursus</i>) — род млекопитающих отряда хищных.</p>
+<p>Согласно палеонтологическим сведениям, род медведей появился 5-6 миллионов лет назад. Первым его представителем в настоящее время считают медведя <i>Ursus minimus</i> — относительно небольшое животное, чьи ископаемые останки найдены на территории Франции. Все современные четыре вида рода, а также ряд вымерших (таких, например, как пещерный медведь <i>Ursus spelaeus</i>) происходят от этрусского медведя (<i>Ursus etruscus</i>), жившего 2-1 миллиона лет назад.</p>
+<p>Самым молодым видом рода является белый медведь, который отделился от бурого медведя примерно 200 000 лет назад.</p>
+</div>
+<div id="tabs-2">
+<p><b>Белки</b> (<i>лат. Sciurus</i>) — род грызунов семейства беличьих. Кроме собственно рода <i>Sciurus</i>, белками называют ещё целый ряд представителей семейства беличьих из родов бурундуковые белки (<i>Tamiasciurus</i>), пальмовые белки (<i>Funambulus</i>) и многих других. Что касается собственно рода <i>Sciurus</i>, то он объединяет в себя около 30 видов, распространённых в Европе, Северной и Южной Америке 
+и в умеренном поясе Азии.</p>
+<p>Имеет удлинённое тело с пушистым длинным хвостом, уши длинные, цвет темно-бурый с белым брюшком, иногда серый (особенно зимой). Водятся повсюду, кроме Австралии. Белка является источником ценного меха.</p>
+</div>
+<div id="tabs-3">
+<p><b>Обыкновенная, или рыжая лисица</b> (<i>лат. Vulpes vulpes</i>) — хищное млекопитающее семейства псовых, наиболее распространённый и самый крупный вид рода лисиц. Длина тела 60—90 см, хвоста — 40—60 см, масса — 6—10 кг.</p>
+<p>Окраска и размеры лисиц различны в разных местностях; всего насчитывают 40—50 подвидов, не учитывая более мелких форм. В общем, при продвижении на север лисицы становятся более крупными и светлыми, на юг — мелкими и более тускло окрашенными. В северных районах и в горах также чаще встречаются чёрно-бурые и другие меланистические формы окраски лисиц. Наиболее распространённый окрас: ярко-рыжая спина, белое брюхо, тёмные лапы. Внешне лисица представляет собой зверя среднего размера с изящным туловищем на невысоких лапах, с вытянутой мордой, острыми ушами и длинным пушистым хвостом.</p>
+</div>
+<!-- Задание UI Взаимодействие-->
+<script type="text/javascript">$(document).ready(function(){
+
+$("#el1").draggable().resizable();
+$("#sort1").sortable();
+
+$("#el2").draggable({stack:"#drop1"});
+$("#el3").draggable({stack:"#drop1"});
+$("#drop1").droppable({
+accept:"#el2, #el3", 
+drop:function(br, ei){
+ei.draggable.css("display","none")
+$("#drop1").css("backgroundColor", "green")
+setTimeout('$("#drop1").css("backgroundColor", "white")',100);
+}
+});
+$("#drop2").droppable({
+accept:"#el2", 
+drop:function(per1, per2){
+per2.draggable.css("display","none")
+$("#drop2").css("backgroundColor", "green")
+setTimeout('$("#drop2").css("backgroundColor", "white")',100);
+}
+});
+
+});
+
+</script>
+<!--Виджеты 1-->
+<script type="text/javascript">
+	$("#accordion1").accordion();
+$("#accordion2").accordion();
+$("#auto").autocomplete({source:$("#list").text().split("\\n"), minLength:"3"});
+$("#el1, #el2").button();
+$("#el3").buttonset();
+</script>
+
+<!--Виджеты 2-->
+<script type="text/javascript">
+	$(document).ready(function(){
+
+$("#sd1").slider();
+$("#pb1").progressbar({value:40});
+$("#tabs").tabs().css("color","red");
+$("#but1").click(function(){
+$("#descr1").dialog();
+});	
+$("#but2").click(function(){
+$("#descr2").dialog();
+});	
+$("#but3").click(function(){
+$("#descr3").dialog();
+});
+
+});
+</script>
+<!--Эффекты -->
+<script type="text/javascript">
+	//1
+$("#but1").click(function(){
+$("#container1").effect("bounce",{},1000);
+$("#container2").effect("pulsate",{},1000);
+});
+$("#but2").click(function(){
+$("#container1").hide("explode",{},1000);
+$("#container2").hide("puff",{},1000);
+});
+$("#but3").click(function(){
+$("#container1").show("slide",{},1000);
+$("#container2").show("drop",{},1000);
+});
+//2
+$("#but4").click(function(){
+$("#square").animate({
+borderColor:"red",
+borderWidth:3}, 1000);
+});
+$("#but5").click(function(){
+$("#square").animate({
+color:"brown"}, 1000);
+});
+$("#but6").click(function(){
+$("#square").animate({
+backgroundColor:"#C0C0C0",
+borderColor:"black",
+color:"black",
+borderWidth:1},1000)
+});
+</script>
+
+</body>
+</html
