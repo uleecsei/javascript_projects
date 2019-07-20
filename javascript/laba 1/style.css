@@ -1,0 +1,322 @@
+      *{
+	margin: 0;
+	padding: 0;
+
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: 'PT Sans', sans-serif;
+	
+}
+.wrapper 
+{
+	
+ 	max-width: 950px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+header{
+
+	height: 92px;
+	color: #000;
+	border-bottom: 2px solid #e7e7e7;
+	display: flex;
+	width: 100%;
+
+}
+header h1{
+	display: flex;
+	width: 134px;
+	margin: 20px 0 0 0;
+}
+ul{
+	display: flex;
+	flex-flow: row nowrap;
+	white-space: nowrap;
+}
+nav{
+	margin-left: 310px;
+	
+}
+
+nav li{
+	
+	margin: 56px 22px 0 10px;
+
+}
+nav li a{
+	color:#8d8d8d;
+	text-transform: uppercase;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size : 18px;
+
+}
+
+nav li a:hover{
+	border-bottom: 1px solid #f26522;
+
+}
+
+.about_us{
+	border-bottom: 2px solid #e7e7e7;
+	height: 58px;
+}
+.about_us h2{
+	padding-bottom: 8px;
+	border-bottom: 4px solid #f26522;
+
+}
+h2{
+	color:#686868;
+	float:left;
+	font-family: arvo, serif;
+	margin: 18px 0 18px 0;
+
+}
+.about_us a{
+	text-transform: uppercase;
+	color:#000;
+	float:right;
+	margin: 30px 0 18px 0;
+	font-family: 'Arvo', serif;
+	font-size:15px;
+
+}	
+.about_us p{
+	text-transform: uppercase;
+	color:#000;
+	float:right;
+	margin: 30px 0 18px 0;
+	font-family: arvo, serif;
+	font-size:15px;
+
+}
+
+.quote{
+	border-left:5px solid #f26522;
+	color: #606060;
+	height:80px;
+	background-color: #ebebeb;
+	margin-top:20px;
+	padding-top: 20px;
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+	font-size: 18px;
+}
+.quote span{
+	font-size: 24px;
+}
+
+
+.whoweare{
+	height: 370px;
+	color:#757575;
+	flex-direction: column;
+	display: flex;
+	max-width: 620px;
+	font-family: PT Sans;
+	
+}
+
+.whoweare h2{
+	padding: 22px 0 10px 0;
+}
+
+.ourskills h2{
+	padding: 22px 0 10px 0;
+	
+}
+
+.ourskills{
+	height: 370px;
+	width: 309px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 21px;
+
+}
+.ourskills div{
+	font-size: 15px;
+	color: white;
+	 font-family: PT sans;
+	 width: 300px;
+	 height: 41px;
+	 margin:10px 0; 
+}
+.ourskills i{
+	
+	
+} 
+.whychooseus{
+	width: 475px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.whychooseus h3{
+	border-bottom: 2px solid #e7e7e7;
+	font-family: 'PT Sans', sans-serif;
+	color: #606060;
+
+}
+.whychooseus p{
+	color:#757575;	
+	font-family: PT Sans;
+	height: auto;
+}
+
+.whatclientsay{
+	width: 475px;
+	margin-left: 21px;
+	height: 370px;
+	display: flex;
+	flex-direction: column;
+	font-family: PT Sans italic;
+	color:#8d8d8d;
+
+}
+.shapecubes {
+	display: inline-flex;
+	justify-content: space-between;
+}
+.headerblock{
+	display: flex;
+}
+.firstblock{
+	flex-wrap: wrap;
+}
+.secondblock{
+	display: flex;
+}
+.fourthblock{
+	margin : 30px 0 10px 0;
+	display: inline-flex;
+}
+.fifthblock{
+	height: 216px;
+	display: flex;
+	flex-flow:inherit; 
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+footer li{
+
+	margin: 0 0 3px 0;
+	width: 100%;
+}
+footer nav li a{
+	font-family: PT Sans regular;
+	font-size: 13px;
+
+}
+section {
+	width: 220px;
+	height: 330px;
+	color:#757575;
+	font-family: PT Sans regular;
+}
+
+.hoveritem li img:hover{
+	filter: contrast(0);
+}
+footer h2{
+	width:100%;border-bottom: 2px solid #e7e7e7;
+}
+@media screen and (max-width: 950px){
+	
+	header{
+		flex-wrap: wrap;
+	}
+	nav{
+		margin:0 auto;
+	}
+	.whoweare{
+		height: auto;
+	}
+	.whatclientsay{
+		height: 370px;
+	}
+		section{
+		height: auto;
+		margin :2px;
+	}
+}
+@media screen and (max-width: 619px){
+	header{
+		width: 100%;
+	}
+	
+
+	.firstblock{
+		margin-top: 100px;
+	}
+	header h1{
+		margin: 0 auto;
+	}
+	.quote{
+		display: none;
+	}
+	.about_us{
+		margin:0 20px ;
+	}
+	footer{
+		margin: 0 20px;
+
+	}
+	
+	
+	.secondblock{
+		flex-wrap: wrap;
+	}
+	.fourthblock{
+		flex-wrap: wrap;
+	}
+	.whoweare{
+		margin: 0 20px;
+		height: auto;
+	}
+	.whychooseus{
+		margin: 0 20px;
+		height: auto;
+	}
+	.fourthblock{
+		flex-direction: column;
+	}
+	.whatclientsay{
+		margin: 0 20px;
+	}
+	.fifthblock{
+		margin: 0 20px;
+		height: auto;
+	}
+	.shapecubes{
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		height: auto;
+	}
+	footer{
+		flex-direction: column;
+		-ms-align-self: center;
+		align-self: center;
+	}
+	footer section{
+		width: 100%;
+	}
+	.fifthblock ul{
+		flex-direction: column;
+		align-self: center;
+	}
+}
+
