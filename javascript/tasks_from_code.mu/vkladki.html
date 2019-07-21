@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вкладки на чистом js</title>
+	<style>
+		#wrapper{
+			width: 600px;
+			height: auto;
+			margin: 0 auto;
+			border: 2px solid lightgreen;
+			border-radius: 20px;
+			text-align: center;
+		}
+		#wrapper>div{
+			display: inline-block;
+			margin-left: 5px;
+			margin-right: 5px;
+			margin-top: 5px;
+			height: 70px;
+			background-color: #b5b1b124;
+			border-top-right-radius: 20px 20px;
+			border-top-left-radius: 20px 20px;
+			color:#09072b;
+
+		}
+		#h1{
+			width: 170px;
+			cursor: pointer;
+		}
+		#h2{
+			width: 120px;
+			cursor: pointer;
+		}
+		#h3{
+			width: 100px;
+			cursor: pointer;
+		}
+		#h4{
+			width: 90px;
+			cursor: pointer;
+		}
+		hr{
+		width:520px;
+		margin-top:0;
+		color: #b5b1b124;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+
+		<div id="h1"><h1>JavaScript</h1></div>
+		<div id="h2"><h1>Jquery</h1></div>
+		<div id="h3"><h1>DOM</h1></div>
+		<div id="h4"><h1>CSS</h1></div>
+		<hr>
+		<div id="text" style="background-color: white; border:none;text-align: left;margin: 0 40px;font-size: 19px;">
+			<p>JavaScript — прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.</p>
+
+			<p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p><br>
+
+		</div>
+	</div>
+	<script>
+		//Всё просто, ясно и туповато...
+
+		let h1 = document.getElementById('h1');
+		let h2 = document.getElementById('h2');
+		let h3 = document.getElementById('h3');
+		let h4 = document.getElementById('h4');
+		let text = document.getElementById('text');
+		h1.style.backgroundColor = "#27c662";
+		h1.style.color = "white";
+
+		h1.onclick = () =>{
+			text.innerHTML = "<p>JavaScript — прототипно-ориентированный сценарный язык программирования. Является реализацией языка ECMAScript.</p><p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p><br>";
+			h1.style.backgroundColor = "#27c662";
+			h1.style.color = "white";
+			h2.style.color = "#09072b";
+			h3.style.color = "#09072b";
+			h4.style.color = "#09072b";
+			h2.style.backgroundColor = "#b5b1b124";
+			h3.style.backgroundColor = "#b5b1b124";
+			h4.style.backgroundColor = "#b5b1b124";
+		}
+		h2.onclick = () =>{
+			text.innerHTML = "<p>jQuery — библиотека JavaScript, фокусирующаяся на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный API для работы с AJAX. Сейчас разработка jQuery ведётся командой jQuery во главе с Джоном Резигом.</p><br>";
+			h2.style.backgroundColor = "#27c662";
+			h2.style.color = "white";
+			h1.style.color = "#09072b";
+			h3.style.color = "#09072b";
+			h4.style.color = "#09072b";
+			h1.style.backgroundColor = "#b5b1b124";
+			h3.style.backgroundColor = "#b5b1b124";
+			h4.style.backgroundColor = "#b5b1b124";
+		}
+		h3.onclick = () =>{
+			text.innerHTML = "<p>DOM — это не зависящий от платформы и языка программный интерфейс, позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, а также изменять содержимое, структуру и оформление таких документов.</p><br>";
+			h3.style.backgroundColor = "#27c662";
+			h3.style.color = "white";
+			h2.style.color = "#09072b";
+			h1.style.color = "#09072b";
+			h4.style.color = "#09072b";
+			h2.style.backgroundColor = "#b5b1b124";
+			h1.style.backgroundColor = "#b5b1b124";
+			h4.style.backgroundColor = "#b5b1b124"
+		}
+		h4.onclick = () =>{
+			text.innerHTML = "<p>CSS — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.</p><br>";
+			h4.style.backgroundColor = "#27c662";
+			h4.style.color = "white";
+			h2.style.color = "#09072b";
+			h3.style.color = "#09072b";
+			h1.style.color = "#09072b";
+			h2.style.backgroundColor = "#b5b1b124";
+			h3.style.backgroundColor = "#b5b1b124";
+			h1.style.backgroundColor = "#b5b1b124";
+		}
+	</script>
+</body>
+</html>
