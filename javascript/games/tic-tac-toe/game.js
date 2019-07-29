@@ -97,6 +97,7 @@ function victory(str){
 		alert("Боевая ничья!");
 	}
 	for(i of gameCubes)
+		
 		i.innerHTML = "";
 		xoCheck = true;
 }
