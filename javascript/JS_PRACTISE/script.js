@@ -178,7 +178,7 @@ console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[3-7]a/g,"!"));
 console.log('aaa@bbb eee7@kkk'.replace(/(\w+)\@(\w+)/g,"$2@$1"));
 
 //2
-console.log('a1b2c3'.replace(/(\d)/g,"$1$1"));
+console.log('a1b2c3YESBOSs'.replace(/(\d)/g,"$1$1"));
 
 //3
 let email = 'my_email@gmail.com';
@@ -195,30 +195,56 @@ let year = /(19\d\d|20\d\d|2100)/
 "podvirra prislivva zalupa".replace()
 
 
-//freecodecamp
-function chunkArrayInGroups(arr, size) {
-  let newArr = [];
-  let subArr = [];
-  let sizeOfArr = Math.floor(arr.length/size);
-  
-  for(let i = 0;i<sizeOfArr;i++){  	
-  	for(let j = 0;j<size;j++){
-  		subArr.push(arr.shift());
-  	}
-  	newArr.push(subArr);
-  	subArr = [];
+
+function smallestCommons(arr) {
+  let SCM = 1;
+  let checkDivinity = 0;
+  let isntFound = true;
+  let length = 0;
+  if(arr[0]<arr[arr.length-1]){
+    do{
+      for(let i = arr[0];i <= arr[arr.length-1];i++){
+        if(SCM%i == 0 ){
+          checkDivinity++;
+        }
+        length++;
+      }
+      if(checkDivinity === length){
+        isntFound = false;
+        return SCM;
+      }
+      length = 0;
+      checkDivinity = 0;
+      SCM++;
+    }while(isntFound);
   }
-  if(arr.length%size!==0){
-  	sizeOfArr = arr.length%size;
-  	for(let i = 0;i<sizeOfArr;i++){
-  		alert(i);
-  	subArr.push(arr.shift());
-  }
-  	newArr.push(subArr);
-  }
-  
-  
-  return newArr;
+  else{
+       do{
+      for(let i = arr[0];i >= arr[arr.length-1];i--){
+        if(SCM%i == 0){
+          checkDivinity++;
+        }
+        length++;
+      }
+      if(checkDivinity == length){
+        isntFound = false;
+        return SCM;
+      }
+      length = 0;
+      checkDivinity = 0;
+      SCM++;
+    }while(isntFound);
+  } 
 }
 
-console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+console.log(smallestCommons([23,18]));
+console.clear();
+
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+  arr = arr.flat();
+  console.log(arr);
+  return arr;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
