@@ -240,11 +240,12 @@ function smallestCommons(arr) {
 console.log(smallestCommons([23,18]));
 console.clear();
 
-function steamrollArray(arr) {
-  // I'm a steamroller, baby
-  arr = arr.flat();
-  console.log(arr);
-  return arr;
+
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  
+  return {name : arr[0]["name"],orbitalPeriod : Math.ceil(2 * Math.PI * Math.sqrt(earthRadius**3/GM))};
 }
 
-steamrollArray([1, [2], [3, [[4]]]]);
+console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
