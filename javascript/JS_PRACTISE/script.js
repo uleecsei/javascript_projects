@@ -238,7 +238,7 @@ function smallestCommons(arr) {
 }
 
 console.log(smallestCommons([23,18]));
-console.clear();
+
 
 
 function orbitalPeriod(arr) {
@@ -249,3 +249,40 @@ function orbitalPeriod(arr) {
 }
 
 console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+
+function palindrome(str) {
+  let arr = str.split("");
+  arr = arr.filter((el)=>{if(/[A-Za-z]/.test(el)){
+    return el;
+    }
+  });
+  let firstCheck = arr.join("");
+  let secondCheck = arr.reverse().join("");
+  if(firstCheck.toLowerCase() === secondCheck.toLowerCase()) return true;
+  console.log(secondCheck);
+  // Good luck!
+  return false;
+}
+palindrome("_eye");
+console.clear();
+
+
+
+
+function rot13(str) { // LBH QVQ VG!
+  let arr = str.split('');
+  arr = arr.map((el)=>{
+    if(/[A-Z]/.test(el)){
+      el = String.fromCharCode((el.charCodeAt(0))>13?el.charCodeAt(0)-13:90+el.charCodeAt(0)-13);
+      console.log(el);
+      return el;
+    }
+    else{
+      return el;
+    }
+  });
+  return arr.join('');
+}
+
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC"));
