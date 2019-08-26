@@ -268,7 +268,6 @@ console.clear();
 
 
 
-
 function rot13(str) { // LBH QVQ VG!
   let arr = str.split('');
   arr = arr.map((el)=>{
@@ -286,3 +285,180 @@ function rot13(str) { // LBH QVQ VG!
 
 // Change the inputs below to test
 console.log(rot13("SERR PBQR PNZC"));
+
+
+
+function checkCashRegister(price, cash, cid) {
+  let change;
+  let returnValue = {
+    status: "",
+    change: [],
+  };
+  let error = {status: "INSUFFICIENT_FUNDS", change: []};
+  change = cash - price;
+  let sum = 0;
+  for(let i of cid)
+    sum+=i[1];
+  if(sum<change){
+    return error;
+  }
+  if(sum===change){
+    returnValue.status="CLOSED";
+  }
+  do{
+  switch(true){
+    case Math.floor(change/100)>0:
+    if(Math.floor(cid[cid.length-1][1]/100)>=Math.floor(change/100)){
+      returnValue.change.unshift(["ONE HUNDRED",Math.floor(change/100)*100]);
+      change-=((Math.floor(change/100)*100)).toFixed(2);
+    }
+    else{
+      returnValue.change.unshift(["ONE HUNDRED",cid[8][1]]);
+      change-=cid[8][1].toFixed(2);
+    }break;
+    case Math.floor(change/20)>0:
+    if(Math.floor(cid[7][1]/20)>=Math.floor(change/20)){
+      returnValue.change.unshift(["TWENTY",Math.floor(change/20)*20]);
+      change -=(Math.floor(change/20)*20).toFixed(2);
+    }   
+    else{
+      returnValue.change.unshift(["TWENTY",cid[7][1]]);
+      change-=cid[7][1].toFixed(2);
+    }break;
+    case Math.floor(change/10)>0:
+    if(Math.floor(cid[6][1]/10)>=Math.floor(change/10)){
+      returnValue.change.unshift(["TEN",Math.floor(change/10)*10]);
+      change-=(Math.floor(change/10)*10).toFixed(2);
+    } 
+    else{
+      returnValue.change.unshift(["TEN",cid[6][1]]);
+      change-=cid[6][1].toFixed(2);
+    }break;
+    case Math.floor(change/5)>0:
+    if(Math.floor(cid[5][1]/5)>=Math.floor(change/5)){
+      returnValue.change.unshift(["FIVE",Math.floor(change/5)*5]);
+      change-=(Math.floor(change/5)*5).toFixed(2);
+    }   
+    else{
+      returnValue.change.unshift(["FIVE",cid[5][1]]);
+      change-=cid[5][1].toFixed(2);
+    }break;
+    case change >= 1:
+    if(cid[4][1]>=Math.floor(change)){
+      returnValue.change.unshift(["ONE",Math.floor(change)]);
+      change-=Math.floor(change).toFixed(2);
+    }
+    else{
+      returnValue.change.unshift(["ONE",cid[4][1]]);
+      change-=cid[4][1].toFixed(2);
+    }break;
+    case change>=0.25:
+    if(Math.floor(cid[3][1]/0.25)>=Math.floor(change/0.25)){
+      returnValue.change.unshift(["QUARTER",Math.floor(change/0.25)*0.25]);
+      change-=(Math.floor(change/0.25)*0.25).toFixed(2);
+    }  
+    else{
+      returnValue.change.unshift(["QUARTER",cid[3][1]]);
+      change-=cid[3][1].toFixed(2);
+    }break;
+    case change>=0.1:
+      if(Math.floor(cid[2][1]/0.1)>=Math.floor(change/0.1)){
+      returnValue.change.unshift(["DIME",Math.floor(change/0.1)*0.1]);
+      change-=(Math.floor(change/0.1)*0.1).toFixed(2);
+    }  
+    else{
+      returnValue.change.unshift(["DIME",cid[2][1]]);
+      change-=cid[2][1].toFixed(2);
+    }break;
+    case change>=0.05:
+      if(Math.floor(cid[1][1]/0.05)>=Math.floor(change/0.05)){
+      returnValue.change.unshift(["NICKEL",Math.floor(change/0.05)*0.05]);
+      change-=(Math.floor(change/0.05)*0.05).toFixed(2);
+    } 
+    else{
+      returnValue.change.unshift(["NICKEL",cid[1][1]]);
+      change-=cid[1][1].toFixed(2);
+    }break;
+    case change>=0.01:
+      if(Math.floor(cid[0][1]/0.01)>=Math.floor(change/0.01)){
+      returnValue.change.unshift(["PENNY",Math.floor(change/0.01)*0.01]);
+      change-=(Math.floor(change/0.01)*0.01).toFixed(2);
+    }
+    else{
+      returnValue.change.unshift(["PENNY",cid[0][1]]);
+      change-=cid[0][1].toFixed(2);
+    }break;
+  }}while(change>0);
+
+  if(!returnValue.status){
+    returnValue.status = "OPEN";
+  }
+  
+  // Here is your change, ma'am.
+  return returnValue;
+  
+}
+
+// Example cash-in-drawer array:
+// [["PENNY", 1.01]0,
+// ["NICKEL", 2.05]1,
+// ["DIME", 3.1]2,
+// ["QUARTER", 4.25]3,
+// ["ONE", 90]4,
+// ["FIVE", 55]5,
+// ["TEN", 20]6,
+// ["TWENTY", 60]7,
+// ["ONE HUNDRED", 100]]8
+
+console.log(checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
+
+
+let people = null;
+let nation = people || [1] && +"Ukrainian";
+console.log(nation);
+console.clear();
+
+
+function isIsogram(str){
+  let newArr = [];
+  for(i of str){
+  if(newArr.includes(i)){
+    return false;
+  }
+  newArr.push(i);  
+}
+  return true;
+  //...
+}
+console.log(isIsogram("qwer"));
+
+function digital_root(n) {
+  return (n - 1) % 9 + 1;
+}
+console.log(455 % 9);
+function findOdd(A) {
+  return A.sort((a,b)=>a-b).filter((item)=>{
+  console.log(A.lastIndexOf(item)-A.indexOf(item)%2==0);
+  return A.lastIndexOf(item)-A.indexOf(item)%2==0});
+  
+  //happy coding!
+}
+console.log(5^3);
+
+let mem = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+multiplyNumeric(mem);
+console.log(mem);
+function multiplyNumeric(menu){
+  for(let i in menu){
+    if(typeof menu[i] == typeof 1){
+      menu[i] = menu[i]*2;
+      console.log(menu[i]);
+    }
+    
+  }
+}
+console.clear();
