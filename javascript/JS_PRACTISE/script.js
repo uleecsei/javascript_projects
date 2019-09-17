@@ -421,7 +421,7 @@ console.clear();
 
 function isIsogram(str){
   let newArr = [];
-  for(i of str){
+  for(let i of str){
   if(newArr.includes(i)){
     return false;
   }
@@ -430,7 +430,7 @@ function isIsogram(str){
   return true;
   //...
 }
-console.log(isIsogram("qwer"));
+//console.log(isIsogram("qwer"));
 
 function digital_root(n) {
   return (n - 1) % 9 + 1;
@@ -461,4 +461,247 @@ function multiplyNumeric(menu){
     
   }
 }
+
+// class MyString{
+//   reverse(str){
+//     return str.split('').reverse().join('');
+//   }
+//   ucFirst(str){
+//     return str[0].toUpperCase() + str.slice(1);
+//   }
+//   ucWords(str){
+//     return str.split(/\s+/).map(element => element[0].toUpperCase() + element.slice(1)).join(' ');
+//   }
+// }
+// var str = new MyString();
+// console.log(str.reverse('abcde')); //выведет 'edcba'
+// console.log(str.ucFirst('ewfwefwejfwekfj')); //выведет 'Abcde'
+// console.log(str.ucWords('abcde abcde abcde')); //выведет 'Abcde Abcde Abcde'
+
+class Validator {
+  isEmail(str){
+    return /[a-z_]+\@[a-z]{2,6}\.[a-z]{2,3}/.test(str);
+  }
+  isDate(str){
+    return /[0-9]{2}\.[0-9]{2}\.[0-9]{4}/.test(str);
+  }
+  isDomain(str){
+    return /\w+\.\w+/.test(str);
+  }
+  isPhone(str){
+    return /\+380 \([0-9]{2}\) [0-9]{3}\-[0-9]{2}\-[0-9]{2}/.test(str);
+  }
+}
+
+var validator = new Validator();
+
+console.log(validator.isEmail('uleecsei@gmail.com'));
+console.log(validator.isDomain('phphtml.net'));
+console.log(validator.isDate('12.05.2020'));
+console.log(validator.isPhone('+380 (29) 817-68-92')); //тут можете формат своей страны
+
+class User {
+	constructor(name, surname) {
+		this.name = name;
+		this.surname = surname;
+	}
+
+	getFullName() {
+		return this.name + ' ' + this.surname;
+	}
+}
+class Student extends User{
+  constructor(name,surname,year){
+    super(name,surname);
+    this.year = year;
+  }
+  getCourse(){
+    if(this.year != undefined 
+      && typeof this.year ==='number' 
+      && 2019 - this.year < 5 && 2019 - this.year > 0){
+      return 2019 - this.year;
+    }
+    else{
+      console.error("Wtf?");
+      return "error";
+    }
+  }
+}
+var student = new Student('Иван', 'Иванов', 2018);
+
+console.log(student.name); //выведет 'Иван'
+console.log(student.surname); //выведет 'Иванов'
+console.log(student.getFullName()); //выведет 'Иван Иванов'
+console.log(student.year); //выведет 2016
+console.log(student.getCourse()); //выведет 3 - третий курс, так как текущий год 2019
+
+function isPrime(num) {
+  for (var i = 2; i < num; i++) {
+      if(num%i==0)
+          return false;
+  }
+  return true;
+}
+
+function reversiblePrime(n){
+let reversible = [2, 3, 5, 7];
+let rev;
+for(let i = 11;  reversible.length < 2000; i+= 2){
+if (i%3 != 0 && i%5 != 0 && i%7 != 0){
+
+if(isPrime(i) == true){
+  rev = parseFloat(
+    i
+      .toString()
+      .split('')
+      .reverse()
+      .join('')
+  ); 
+  if(isPrime(rev)===true){
+reversible.push(i);
+}
+}
+}
+}
+
+reversible.sort(function(a,b){ 
+return a - b;
+})
+console.log(reversible);
+return reversible[n];
+
+}
 console.clear();
+
+// class Elem{
+//   constructor(selector){
+//     this.selector = document.getElementsByTagName('p');
+//   }
+//   html(value){
+//     this.selector[0].innerHTML = value;
+//   }
+//   append(value){
+//     this.selector.appendChild(value);
+//   }
+//   prepend(value){
+//     this.selector.prependChild(value);
+//   }
+// }
+
+// var elem = new Elem('p');
+
+// console.log(elem.selector);
+// elem.html('!'); //запишет в текст элемента '!'
+// // elem.append('!'); //запишет в начало элемента '!'
+// // elem.prepend('!'); //запишет в конец элемента '!'
+// // elem.attr('class', 'www'); //запишет в атрибут class значение www
+
+// // //Должны работать цепочки методов:
+// // elem.html('hello').append('!').prepend('!');
+// // elem.attr('class', 'www').attr('title', 'hello');
+console.log( "\u{1F60D}" +  "\u{1F60D}" + "\u{1F60D}" +  "\u{1F60D}");
+
+
+
+
+
+// const Calculator = function() {
+
+//   this.evaluate = string => {
+ 
+//     let arr = string.split(' ');
+//     let i = 0;
+//    do{
+//       if(arr[i] == "/"){
+//         arr.splice(i,1,arr[i - 1]/arr[i + 1]);
+//         arr.splice(i - 1,1);
+//         arr.splice(i,1);
+//       }
+//       if(arr[i] == "*"){
+//         arr.splice(i,1,arr[i - 1]/arr[i + 1]);
+//         arr.splice(i - 1,1);
+//         arr.splice(i,1);
+//       }
+//       i++;
+//       if(i == arr.length)i = 0;
+//     }while(arr.includes("/")||arr.includes("*"));
+//     i = 0;
+//     do{
+//       if(arr[i] == "+"){
+//         arr.splice(i,1,+arr[i - 1]+ +arr[i + 1]);
+//         arr.splice(i - 1,1);
+//         arr.splice(i,1);
+//       }
+//       if(arr[i] == "-"){
+//         arr.splice(i,1,arr[i - 1] - arr[i + 1]);
+//         arr.splice(i - 1,1);
+//         arr.splice(i,1);
+//       }
+//       i++;
+//       if(i == arr.length)i = 0;
+//       }while(arr.includes("+")||arr.includes("-"));
+//       console.log(arr);
+//       return arr;
+//     } 
+    
+    
+//     // do code here
+//   }
+
+
+console.clear();
+function f(){
+obj = {
+  a: "kek",
+  b: "meme",
+  c: "??"
+}
+obj.meme = "kek";
+obj.sobaka = "lel";
+return obj;
+}
+console.log("" + f());
+const Calculator = function() {
+
+  this.evaluate = string => {
+   
+    let arr = string.split(' ');
+    let i =  0;
+   do{
+     if(/[\/\*]/g.test(arr.join(' '))){
+      if(arr[i] == "/"){
+        arr.splice(i - 1,1,arr[i - 1]/arr[i + 1]);
+        arr.splice(i,2);
+        i=0;
+      }
+      if(arr[i] == "*"){
+        arr.splice(i - 1,1,arr[i - 1]*arr[i + 1]);
+        arr.splice(i,2);
+        i=0;
+      }
+      }
+      else{
+      if(arr[i] == "+"){
+        arr.splice(i - 1,1,+arr[i - 1]+ +arr[i + 1]);
+        arr.splice(i,2);
+        i=0;
+      }
+      if(arr[i] == "-"){
+        arr.splice(i - 1,1,arr[i - 1]-arr[i + 1]);
+        arr.splice(i,2);
+        i=0;
+      }
+    }
+      i++;
+      if(i == arr.length)i = 0;
+      }while(/(\*|\/|\+|-(?=\s))/g.test(arr.join(' ')));
+      console.log(arr);
+      return arr;
+    } 
+    
+    
+    // do code here
+  }
+
+var calculate = new Calculator();
+calculate.evaluate("2 + 3 * 4 / 3 - 6 / 3 * 3 + 8");
