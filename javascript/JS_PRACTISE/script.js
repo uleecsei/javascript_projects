@@ -70,7 +70,7 @@
 
 // //11
 // function func(a = 'Аноним') {
-// 	alert('Привет, '+ a );
+// 	console.log('Привет, '+ a );
 // }
 // let name23 = 'Юзернейм';
 // func();
@@ -98,95 +98,95 @@
 // Задачи на регулярные выражения JavaScript. Часть 1
 
 //1
-console.log('ahb acb aeb aeeb adcb axeb'.replace(/a.b/g,"!"));
+console.log('ahb acb aeb aeeb adcb axeb'.replace(/a.b/g, "!"));
 
 //2
-console.log('aba aca aea abba adca abea'.replace(/a..a/g,"!"));
+console.log('aba aca aea abba adca abea'.replace(/a..a/g, "!"));
 
 //3
-console.log('aba aca aea abba adca abea'.replace(/ab.a/g,"!"));
+console.log('aba aca aea abba adca abea'.replace(/ab.a/g, "!"));
 
 //4
-console.log('aa aba abba abbba abca abea'.replace(/ab+a/g,"!"));
+console.log('aa aba abba abbba abca abea'.replace(/ab+a/g, "!"));
 
 //5
-console.log('aa aba abba abbba abca abea'.replace(/ab*a/g,"!"));
+console.log('aa aba abba abbba abca abea'.replace(/ab*a/g, "!"));
 
 //6
-console.log('aa aba abba abbba abca abea'.replace(/ab?a/g,"!"));
+console.log('aa aba abba abbba abca abea'.replace(/ab?a/g, "!"));
 
 //7
-console.log('aa aba abba abbba abca abea'.replace(/ab*a/g,"!"));
+console.log('aa aba abba abbba abca abea'.replace(/ab*a/g, "!"));
 
 //8
-console.log('ab abab abab abababab abea'.replace(/(ab)+/g,"!"));
+console.log('ab abab abab abababab abea'.replace(/(ab)+/g, "!"));
 
 //12
-console.log('23 2+3 2++3 2+++3 445 677'.replace(/2\+*3/g,"!"));
+console.log('23 2+3 2++3 2+++3 445 677'.replace(/2\+*3/g, "!"));
 
 //13
-console.log('*+ *q+ *qq+ *qqq+ *qqq qqq+'.replace(/\*q+\+/g,"!"));
+console.log('*+ *q+ *qq+ *qqq+ *qqq qqq+'.replace(/\*q+\+/g, "!"));
 
 //14
-console.log('aba accca azzza wwwwa'.replace(/^a.+?a$/,"!"));
+console.log('aba accca azzza wwwwa'.replace(/^a.+?a$/, "!"));
 
 
 // Задачи на регулярные выражения JavaScript. Часть 1
 
 //1
-console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{2,4}a/g,"!"));
+console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{2,4}a/g, "!"));
 
 //2
-console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{0,3}a/g,"!"));
+console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{0,3}a/g, "!"));
 
 //3
-console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{4,}a/g,"!"));
+console.log('aa aba abba abbba abbbba abbbbba'.replace(/ab{4,}a/g, "!"));
 
 //4
-console.log('a1a a2a a3a a4a a5a aba aca'.replace(/a\da/g,"!"));
+console.log('a1a a2a a3a a4a a5a aba aca'.replace(/a\da/g, "!"));
 
 //5
-console.log('a1a a22a a333a a4444a a55555a aba aca'.replace(/a\d+a/g,"!"));
+console.log('a1a a22a a333a a4444a a55555a aba aca'.replace(/a\d+a/g, "!"));
 
 //6
-console.log('aa a1a a22a a333a a4444a a55555a aba aca'.replace(/a\d*a/g,"!"));
+console.log('aa a1a a22a a333a a4444a a55555a aba aca'.replace(/a\d*a/g, "!"));
 
 //7
-console.log('avb a1b a2b a3b a4b a5b abb acb'.replace(/a\Db/g,"!"));
+console.log('avb a1b a2b a3b a4b a5b abb acb'.replace(/a\Db/g, "!"));
 
 //8
-console.log('ave a#b a2b a$b a4b a5b a-b acb'.replace(/a\Wb/g,"!"));
+console.log('ave a#b a2b a$b a4b a5b a-b acb'.replace(/a\Wb/g, "!"));
 
 //9
-console.log('ave a#b a2b a$b a4b a5b a-b acb'.replace(/\s/g,"!"));
+console.log('ave a#b a2b a$b a4b a5b a-b acb'.replace(/\s/g, "!"));
 
 //10
-console.log('aba aea aca aza axa'.replace(/a[bex]a/g,"!"));
+console.log('aba aea aca aza axa'.replace(/a[bex]a/g, "!"));
 
 //11
-console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[b\.\+\*]a/g,"!"));
+console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[b\.\+\*]a/g, "!"));
 
 //12
-console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[b\.\+\*]a/g,"!"));
+console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[b\.\+\*]a/g, "!"));
 
 //13
-console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[3-7]a/g,"!"));
+console.log('aba aea aca aza axa a.a a+a a*a'.replace(/a[3-7]a/g, "!"));
 
 //Задачи на регулярные выражения JavaScript. Часть 3
 
 //1
-console.log('aaa@bbb eee7@kkk'.replace(/(\w+)\@(\w+)/g,"$2@$1"));
+console.log('aaa@bbb eee7@kkk'.replace(/(\w+)\@(\w+)/g, "$2@$1"));
 
 //2
-console.log('a1b2c3YESBOSs'.replace(/(\d)/g,"$1$1"));
+console.log('a1b2c3YESBOSs'.replace(/(\d)/g, "$1$1"));
 
 //3
 let email = 'my_email@gmail.com';
-let regEmail =/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+let regEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 console.log(regEmail.test(email));
 
 //4
-let checkForEmails =/^([a-zA-z])+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3}$/g;
+let checkForEmails = /^([a-zA-z])+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3}$/g;
 console.log("wrjoiqwrrj wiqrjowqi ullees@gmail.com wwe".match(checkForEmails));
 
 let time = /[0-1]\d|[0-4]\:[0-5][0-9]/
@@ -201,64 +201,70 @@ function smallestCommons(arr) {
   let checkDivinity = 0;
   let isntFound = true;
   let length = 0;
-  if(arr[0]<arr[arr.length-1]){
-    do{
-      for(let i = arr[0];i <= arr[arr.length-1];i++){
-        if(SCM%i == 0 ){
+  if (arr[0] < arr[arr.length - 1]) {
+    do {
+      for (let i = arr[0]; i <= arr[arr.length - 1]; i++) {
+        if (SCM % i == 0) {
           checkDivinity++;
         }
         length++;
       }
-      if(checkDivinity === length){
+      if (checkDivinity === length) {
         isntFound = false;
         return SCM;
       }
       length = 0;
       checkDivinity = 0;
       SCM++;
-    }while(isntFound);
+    } while (isntFound);
+  } else {
+    do {
+      for (let i = arr[0]; i >= arr[arr.length - 1]; i--) {
+        if (SCM % i == 0) {
+          checkDivinity++;
+        }
+        length++;
+      }
+      if (checkDivinity == length) {
+        isntFound = false;
+        return SCM;
+      }
+      length = 0;
+      checkDivinity = 0;
+      SCM++;
+    } while (isntFound);
   }
-  else{
-       do{
-      for(let i = arr[0];i >= arr[arr.length-1];i--){
-        if(SCM%i == 0){
-          checkDivinity++;
-        }
-        length++;
-      }
-      if(checkDivinity == length){
-        isntFound = false;
-        return SCM;
-      }
-      length = 0;
-      checkDivinity = 0;
-      SCM++;
-    }while(isntFound);
-  } 
 }
 
-console.log(smallestCommons([23,18]));
+console.log(smallestCommons([23, 18]));
 
 
 
 function orbitalPeriod(arr) {
   var GM = 398600.4418;
   var earthRadius = 6367.4447;
-  
-  return {name : arr[0]["name"],orbitalPeriod : Math.ceil(2 * Math.PI * Math.sqrt(earthRadius**3/GM))};
+
+  return {
+    name: arr[0]["name"],
+    orbitalPeriod: Math.ceil(2 * Math.PI * Math.sqrt(earthRadius ** 3 / GM))
+  };
 }
 
-console.log(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+console.log(orbitalPeriod([{
+  name: "sputnik",
+  avgAlt: 35873.5553
+}]));
 
 function palindrome(str) {
   let arr = str.split("");
-  arr = arr.filter((el)=>{if(/[A-Za-z]/.test(el)){
-    return el;
+  arr = arr.filter((el) => {
+    if (/[A-Za-z]/.test(el)) {
+      return el;
     }
   });
   let firstCheck = arr.join("");
   let secondCheck = arr.reverse().join("");
-  if(firstCheck.toLowerCase() === secondCheck.toLowerCase()) return true;
+  if (firstCheck.toLowerCase() === secondCheck.toLowerCase()) return true;
   console.log(secondCheck);
   // Good luck!
   return false;
@@ -270,13 +276,12 @@ console.clear();
 
 function rot13(str) { // LBH QVQ VG!
   let arr = str.split('');
-  arr = arr.map((el)=>{
-    if(/[A-Z]/.test(el)){
-      el = String.fromCharCode((el.charCodeAt(0))>13?el.charCodeAt(0)-13:90+el.charCodeAt(0)-13);
+  arr = arr.map((el) => {
+    if (/[A-Z]/.test(el)) {
+      el = String.fromCharCode((el.charCodeAt(0)) > 13 ? el.charCodeAt(0) - 13 : 90 + el.charCodeAt(0) - 13);
       console.log(el);
       return el;
-    }
-    else{
+    } else {
       return el;
     }
   });
@@ -294,109 +299,113 @@ function checkCashRegister(price, cash, cid) {
     status: "",
     change: [],
   };
-  let error = {status: "INSUFFICIENT_FUNDS", change: []};
+  let error = {
+    status: "INSUFFICIENT_FUNDS",
+    change: []
+  };
   change = cash - price;
   let sum = 0;
-  for(let i of cid)
-    sum+=i[1];
-  if(sum<change){
+  for (let i of cid)
+    sum += i[1];
+  if (sum < change) {
     return error;
   }
-  if(sum===change){
-    returnValue.status="CLOSED";
+  if (sum === change) {
+    returnValue.status = "CLOSED";
   }
-  do{
-  switch(true){
-    case Math.floor(change/100)>0:
-    if(Math.floor(cid[cid.length-1][1]/100)>=Math.floor(change/100)){
-      returnValue.change.unshift(["ONE HUNDRED",Math.floor(change/100)*100]);
-      change-=((Math.floor(change/100)*100)).toFixed(2);
+  do {
+    switch (true) {
+      case Math.floor(change / 100) > 0:
+        if (Math.floor(cid[cid.length - 1][1] / 100) >= Math.floor(change / 100)) {
+          returnValue.change.unshift(["ONE HUNDRED", Math.floor(change / 100) * 100]);
+          change -= ((Math.floor(change / 100) * 100)).toFixed(2);
+        } else {
+          returnValue.change.unshift(["ONE HUNDRED", cid[8][1]]);
+          change -= cid[8][1].toFixed(2);
+        }
+        break;
+      case Math.floor(change / 20) > 0:
+        if (Math.floor(cid[7][1] / 20) >= Math.floor(change / 20)) {
+          returnValue.change.unshift(["TWENTY", Math.floor(change / 20) * 20]);
+          change -= (Math.floor(change / 20) * 20).toFixed(2);
+        } else {
+          returnValue.change.unshift(["TWENTY", cid[7][1]]);
+          change -= cid[7][1].toFixed(2);
+        }
+        break;
+      case Math.floor(change / 10) > 0:
+        if (Math.floor(cid[6][1] / 10) >= Math.floor(change / 10)) {
+          returnValue.change.unshift(["TEN", Math.floor(change / 10) * 10]);
+          change -= (Math.floor(change / 10) * 10).toFixed(2);
+        } else {
+          returnValue.change.unshift(["TEN", cid[6][1]]);
+          change -= cid[6][1].toFixed(2);
+        }
+        break;
+      case Math.floor(change / 5) > 0:
+        if (Math.floor(cid[5][1] / 5) >= Math.floor(change / 5)) {
+          returnValue.change.unshift(["FIVE", Math.floor(change / 5) * 5]);
+          change -= (Math.floor(change / 5) * 5).toFixed(2);
+        } else {
+          returnValue.change.unshift(["FIVE", cid[5][1]]);
+          change -= cid[5][1].toFixed(2);
+        }
+        break;
+      case change >= 1:
+        if (cid[4][1] >= Math.floor(change)) {
+          returnValue.change.unshift(["ONE", Math.floor(change)]);
+          change -= Math.floor(change).toFixed(2);
+        } else {
+          returnValue.change.unshift(["ONE", cid[4][1]]);
+          change -= cid[4][1].toFixed(2);
+        }
+        break;
+      case change >= 0.25:
+        if (Math.floor(cid[3][1] / 0.25) >= Math.floor(change / 0.25)) {
+          returnValue.change.unshift(["QUARTER", Math.floor(change / 0.25) * 0.25]);
+          change -= (Math.floor(change / 0.25) * 0.25).toFixed(2);
+        } else {
+          returnValue.change.unshift(["QUARTER", cid[3][1]]);
+          change -= cid[3][1].toFixed(2);
+        }
+        break;
+      case change >= 0.1:
+        if (Math.floor(cid[2][1] / 0.1) >= Math.floor(change / 0.1)) {
+          returnValue.change.unshift(["DIME", Math.floor(change / 0.1) * 0.1]);
+          change -= (Math.floor(change / 0.1) * 0.1).toFixed(2);
+        } else {
+          returnValue.change.unshift(["DIME", cid[2][1]]);
+          change -= cid[2][1].toFixed(2);
+        }
+        break;
+      case change >= 0.05:
+        if (Math.floor(cid[1][1] / 0.05) >= Math.floor(change / 0.05)) {
+          returnValue.change.unshift(["NICKEL", Math.floor(change / 0.05) * 0.05]);
+          change -= (Math.floor(change / 0.05) * 0.05).toFixed(2);
+        } else {
+          returnValue.change.unshift(["NICKEL", cid[1][1]]);
+          change -= cid[1][1].toFixed(2);
+        }
+        break;
+      case change >= 0.01:
+        if (Math.floor(cid[0][1] / 0.01) >= Math.floor(change / 0.01)) {
+          returnValue.change.unshift(["PENNY", Math.floor(change / 0.01) * 0.01]);
+          change -= (Math.floor(change / 0.01) * 0.01).toFixed(2);
+        } else {
+          returnValue.change.unshift(["PENNY", cid[0][1]]);
+          change -= cid[0][1].toFixed(2);
+        }
+        break;
     }
-    else{
-      returnValue.change.unshift(["ONE HUNDRED",cid[8][1]]);
-      change-=cid[8][1].toFixed(2);
-    }break;
-    case Math.floor(change/20)>0:
-    if(Math.floor(cid[7][1]/20)>=Math.floor(change/20)){
-      returnValue.change.unshift(["TWENTY",Math.floor(change/20)*20]);
-      change -=(Math.floor(change/20)*20).toFixed(2);
-    }   
-    else{
-      returnValue.change.unshift(["TWENTY",cid[7][1]]);
-      change-=cid[7][1].toFixed(2);
-    }break;
-    case Math.floor(change/10)>0:
-    if(Math.floor(cid[6][1]/10)>=Math.floor(change/10)){
-      returnValue.change.unshift(["TEN",Math.floor(change/10)*10]);
-      change-=(Math.floor(change/10)*10).toFixed(2);
-    } 
-    else{
-      returnValue.change.unshift(["TEN",cid[6][1]]);
-      change-=cid[6][1].toFixed(2);
-    }break;
-    case Math.floor(change/5)>0:
-    if(Math.floor(cid[5][1]/5)>=Math.floor(change/5)){
-      returnValue.change.unshift(["FIVE",Math.floor(change/5)*5]);
-      change-=(Math.floor(change/5)*5).toFixed(2);
-    }   
-    else{
-      returnValue.change.unshift(["FIVE",cid[5][1]]);
-      change-=cid[5][1].toFixed(2);
-    }break;
-    case change >= 1:
-    if(cid[4][1]>=Math.floor(change)){
-      returnValue.change.unshift(["ONE",Math.floor(change)]);
-      change-=Math.floor(change).toFixed(2);
-    }
-    else{
-      returnValue.change.unshift(["ONE",cid[4][1]]);
-      change-=cid[4][1].toFixed(2);
-    }break;
-    case change>=0.25:
-    if(Math.floor(cid[3][1]/0.25)>=Math.floor(change/0.25)){
-      returnValue.change.unshift(["QUARTER",Math.floor(change/0.25)*0.25]);
-      change-=(Math.floor(change/0.25)*0.25).toFixed(2);
-    }  
-    else{
-      returnValue.change.unshift(["QUARTER",cid[3][1]]);
-      change-=cid[3][1].toFixed(2);
-    }break;
-    case change>=0.1:
-      if(Math.floor(cid[2][1]/0.1)>=Math.floor(change/0.1)){
-      returnValue.change.unshift(["DIME",Math.floor(change/0.1)*0.1]);
-      change-=(Math.floor(change/0.1)*0.1).toFixed(2);
-    }  
-    else{
-      returnValue.change.unshift(["DIME",cid[2][1]]);
-      change-=cid[2][1].toFixed(2);
-    }break;
-    case change>=0.05:
-      if(Math.floor(cid[1][1]/0.05)>=Math.floor(change/0.05)){
-      returnValue.change.unshift(["NICKEL",Math.floor(change/0.05)*0.05]);
-      change-=(Math.floor(change/0.05)*0.05).toFixed(2);
-    } 
-    else{
-      returnValue.change.unshift(["NICKEL",cid[1][1]]);
-      change-=cid[1][1].toFixed(2);
-    }break;
-    case change>=0.01:
-      if(Math.floor(cid[0][1]/0.01)>=Math.floor(change/0.01)){
-      returnValue.change.unshift(["PENNY",Math.floor(change/0.01)*0.01]);
-      change-=(Math.floor(change/0.01)*0.01).toFixed(2);
-    }
-    else{
-      returnValue.change.unshift(["PENNY",cid[0][1]]);
-      change-=cid[0][1].toFixed(2);
-    }break;
-  }}while(change>0);
+  } while (change > 0);
 
-  if(!returnValue.status){
+  if (!returnValue.status) {
     returnValue.status = "OPEN";
   }
-  
+
   // Here is your change, ma'am.
   return returnValue;
-  
+
 }
 
 // Example cash-in-drawer array:
@@ -410,7 +419,17 @@ function checkCashRegister(price, cash, cid) {
 // ["TWENTY", 60]7,
 // ["ONE HUNDRED", 100]]8
 
-console.log(checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
+console.log(checkCashRegister(19.5, 20, [
+  ["PENNY", 1.01],
+  ["NICKEL", 2.05],
+  ["DIME", 3.1],
+  ["QUARTER", 4.25],
+  ["ONE", 90],
+  ["FIVE", 55],
+  ["TEN", 20],
+  ["TWENTY", 60],
+  ["ONE HUNDRED", 100]
+]));
 
 
 let people = null;
@@ -419,14 +438,14 @@ console.log(nation);
 console.clear();
 
 
-function isIsogram(str){
+function isIsogram(str) {
   let newArr = [];
-  for(let i of str){
-  if(newArr.includes(i)){
-    return false;
+  for (let i of str) {
+    if (newArr.includes(i)) {
+      return false;
+    }
+    newArr.push(i);
   }
-  newArr.push(i);  
-}
   return true;
   //...
 }
@@ -436,14 +455,16 @@ function digital_root(n) {
   return (n - 1) % 9 + 1;
 }
 console.log(455 % 9);
+
 function findOdd(A) {
-  return A.sort((a,b)=>a-b).filter((item)=>{
-  console.log(A.lastIndexOf(item)-A.indexOf(item)%2==0);
-  return A.lastIndexOf(item)-A.indexOf(item)%2==0});
-  
+  return A.sort((a, b) => a - b).filter((item) => {
+    console.log(A.lastIndexOf(item) - A.indexOf(item) % 2 == 0);
+    return A.lastIndexOf(item) - A.indexOf(item) % 2 == 0
+  });
+
   //happy coding!
 }
-console.log(5^3);
+console.log(5 ^ 3);
 
 let mem = {
   width: 200,
@@ -452,13 +473,14 @@ let mem = {
 };
 multiplyNumeric(mem);
 console.log(mem);
-function multiplyNumeric(menu){
-  for(let i in menu){
-    if(typeof menu[i] == typeof 1){
-      menu[i] = menu[i]*2;
+
+function multiplyNumeric(menu) {
+  for (let i in menu) {
+    if (typeof menu[i] == typeof 1) {
+      menu[i] = menu[i] * 2;
       console.log(menu[i]);
     }
-    
+
   }
 }
 
@@ -479,16 +501,16 @@ function multiplyNumeric(menu){
 // console.log(str.ucWords('abcde abcde abcde')); //выведет 'Abcde Abcde Abcde'
 
 class Validator {
-  isEmail(str){
+  isEmail(str) {
     return /[a-z_]+\@[a-z]{2,6}\.[a-z]{2,3}/.test(str);
   }
-  isDate(str){
+  isDate(str) {
     return /[0-9]{2}\.[0-9]{2}\.[0-9]{4}/.test(str);
   }
-  isDomain(str){
+  isDomain(str) {
     return /\w+\.\w+/.test(str);
   }
-  isPhone(str){
+  isPhone(str) {
     return /\+380 \([0-9]{2}\) [0-9]{3}\-[0-9]{2}\-[0-9]{2}/.test(str);
   }
 }
@@ -501,27 +523,26 @@ console.log(validator.isDate('12.05.2020'));
 console.log(validator.isPhone('+380 (29) 817-68-92')); //тут можете формат своей страны
 
 class User {
-	constructor(name, surname) {
-		this.name = name;
-		this.surname = surname;
-	}
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
 
-	getFullName() {
-		return this.name + ' ' + this.surname;
-	}
+  getFullName() {
+    return this.name + ' ' + this.surname;
+  }
 }
-class Student extends User{
-  constructor(name,surname,year){
-    super(name,surname);
+class Student extends User {
+  constructor(name, surname, year) {
+    super(name, surname);
     this.year = year;
   }
-  getCourse(){
-    if(this.year != undefined 
-      && typeof this.year ==='number' 
-      && 2019 - this.year < 5 && 2019 - this.year > 0){
+  getCourse() {
+    if (this.year != undefined &&
+      typeof this.year === 'number' &&
+      2019 - this.year < 5 && 2019 - this.year > 0) {
       return 2019 - this.year;
-    }
-    else{
+    } else {
       console.error("Wtf?");
       return "error";
     }
@@ -537,38 +558,38 @@ console.log(student.getCourse()); //выведет 3 - третий курс, т
 
 function isPrime(num) {
   for (var i = 2; i < num; i++) {
-      if(num%i==0)
-          return false;
+    if (num % i == 0)
+      return false;
   }
   return true;
 }
 
-function reversiblePrime(n){
-let reversible = [2, 3, 5, 7];
-let rev;
-for(let i = 11;  reversible.length < 2000; i+= 2){
-if (i%3 != 0 && i%5 != 0 && i%7 != 0){
+function reversiblePrime(n) {
+  let reversible = [2, 3, 5, 7];
+  let rev;
+  for (let i = 11; reversible.length < 2000; i += 2) {
+    if (i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
 
-if(isPrime(i) == true){
-  rev = parseFloat(
-    i
-      .toString()
-      .split('')
-      .reverse()
-      .join('')
-  ); 
-  if(isPrime(rev)===true){
-reversible.push(i);
-}
-}
-}
-}
+      if (isPrime(i) == true) {
+        rev = parseFloat(
+          i
+          .toString()
+          .split('')
+          .reverse()
+          .join('')
+        );
+        if (isPrime(rev) === true) {
+          reversible.push(i);
+        }
+      }
+    }
+  }
 
-reversible.sort(function(a,b){ 
-return a - b;
-})
-console.log(reversible);
-return reversible[n];
+  reversible.sort(function (a, b) {
+    return a - b;
+  })
+  console.log(reversible);
+  return reversible[n];
 
 }
 console.clear();
@@ -599,7 +620,7 @@ console.clear();
 // // //Должны работать цепочки методов:
 // // elem.html('hello').append('!').prepend('!');
 // // elem.attr('class', 'www').attr('title', 'hello');
-console.log( "\u{1F60D}" +  "\u{1F60D}" + "\u{1F60D}" +  "\u{1F60D}");
+console.log("\u{1F60D}" + "\u{1F60D}" + "\u{1F60D}" + "\u{1F60D}");
 
 
 
@@ -608,7 +629,7 @@ console.log( "\u{1F60D}" +  "\u{1F60D}" + "\u{1F60D}" +  "\u{1F60D}");
 // const Calculator = function() {
 
 //   this.evaluate = string => {
- 
+
 //     let arr = string.split(' ');
 //     let i = 0;
 //    do{
@@ -643,65 +664,280 @@ console.log( "\u{1F60D}" +  "\u{1F60D}" + "\u{1F60D}" +  "\u{1F60D}");
 //       console.log(arr);
 //       return arr;
 //     } 
-    
-    
+
+
 //     // do code here
 //   }
 
 
 console.clear();
-function f(){
-obj = {
-  a: "kek",
-  b: "meme",
-  c: "??"
-}
-obj.meme = "kek";
-obj.sobaka = "lel";
-return obj;
+
+function f() {
+  obj = {
+    a: "kek",
+    b: "meme",
+    c: "??"
+  }
+  obj.meme = "kek";
+  obj.sobaka = "lel";
+  return obj;
 }
 console.log("" + f());
-const Calculator = function() {
+const Calculator = function () {
 
   this.evaluate = string => {
-   
+
     let arr = string.split(' ');
-    let i =  0;
-   do{
-     if(/[\/\*]/g.test(arr.join(' '))){
-      if(arr[i] == "/"){
-        arr.splice(i - 1,1,arr[i - 1]/arr[i + 1]);
-        arr.splice(i,2);
-        i=0;
+    let i = 0;
+    do {
+      if (/[\/\*]/g.test(arr.join(' '))) {
+        if (arr[i] == "/") {
+          arr.splice(i - 1, 1, arr[i - 1] / arr[i + 1]);
+          arr.splice(i, 2);
+          i = 0;
+        }
+        if (arr[i] == "*") {
+          arr.splice(i - 1, 1, arr[i - 1] * arr[i + 1]);
+          arr.splice(i, 2);
+          i = 0;
+        }
+      } else {
+        if (arr[i] == "+") {
+          arr.splice(i - 1, 1, +arr[i - 1] + +arr[i + 1]);
+          arr.splice(i, 2);
+          i = 0;
+        }
+        if (arr[i] == "-") {
+          arr.splice(i - 1, 1, arr[i - 1] - arr[i + 1]);
+          arr.splice(i, 2);
+          i = 0;
+        }
       }
-      if(arr[i] == "*"){
-        arr.splice(i - 1,1,arr[i - 1]*arr[i + 1]);
-        arr.splice(i,2);
-        i=0;
-      }
-      }
-      else{
-      if(arr[i] == "+"){
-        arr.splice(i - 1,1,+arr[i - 1]+ +arr[i + 1]);
-        arr.splice(i,2);
-        i=0;
-      }
-      if(arr[i] == "-"){
-        arr.splice(i - 1,1,arr[i - 1]-arr[i + 1]);
-        arr.splice(i,2);
-        i=0;
-      }
-    }
       i++;
-      if(i == arr.length)i = 0;
-      }while(/(\*|\/|\+|-(?=\s))/g.test(arr.join(' ')));
-      console.log(arr);
-      return arr;
-    } 
-    
-    
-    // do code here
+      if (i == arr.length) i = 0;
+    } while (/(\*|\/|\+|-(?=\s))/g.test(arr.join(' ')));
+    console.log(arr);
+    return arr;
   }
+
+
+  // do code here
+}
 
 var calculate = new Calculator();
 calculate.evaluate("2 + 3 * 4 / 3 - 6 / 3 * 3 + 8");
+
+
+function calc(cards) {
+  //coding and coding..
+  let firstElem, secondElem;
+  let sum = 0;
+  let i = 1;
+  while (cards.length > 0) {
+    if (cards.length > 1) {
+      firstElem = cards.pop();
+      secondElem = cards.shift();
+    } else if (cards.length > 0) {
+      firstElem = cards.pop();
+      sum += firstElem * 2 ** i;
+      break;
+    }
+    if (firstElem > secondElem) {
+      sum += firstElem * 2 ** i + secondElem * 2 ** (i + 1);
+    } else {
+      sum += firstElem * 2 ** (i + 1) + secondElem * 2 ** i;
+    }
+    i++;
+  }
+  return sum;
+}
+console.log(calc([8]));
+console.clear();
+
+// функция генератор 
+function sequence(num1, num2) {
+  let counter = num1 - num2;
+  return function () {
+    return counter += num2;
+  }
+};
+let generator = sequence(5, 1);
+let generator2 = sequence(7, 3);
+
+function take(fn, count) {
+  let arr = [];
+  for (let i = 0; i < count; i++) {
+    arr.push(fn());
+  }
+  return arr;
+}
+//console.log(take(generator2,4));
+
+function a(k, p) {
+  return k + p;
+}
+
+function fmap(a, gen) {
+  return function () {
+    return a(gen());
+  }
+}
+console.log(fmap(a, generator2));
+
+function partial(f, ...rest) {
+  return function (...args) {
+    return f(...rest, ...args);
+  }
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function mult(a, b, c, d) {
+  return a * b * c * d;
+}
+
+var add5 = partial(add, 5); // Мы получили функцию с 1 аргументом, которая прибавляет к любому числу 5
+
+console.log(add5(2)); // 7
+console.log(add5(10)); // 15
+console.log(add5(8)); // 13
+
+var mult23 = partial(mult, 2, 3); // мы зафиксировали первые 2 аргумента mult() как 2 и 3
+
+console.log(mult23(4, 5)); // 2*3*4*5 = 120
+console.log(mult23(1, 1)); // 2*3*1*1 = 6
+
+function partialAny(f, ...rest) {
+  return function (...args) {
+    let newArgs = [];
+    let k = 0;
+    rest.forEach((item, index) => {
+      if (item === undefined && args[k] !== undefined) {
+        newArgs.push(args[k]);
+        k++;
+      } else {
+        newArgs.push(item);
+      }
+    });
+    if (args[k] !== undefined) {
+      for (let i = k; i < args.length; i++) {
+        newArgs.push(args[i]);
+      }
+    }
+    return f(...newArgs);
+  }
+}
+
+
+
+function test(a, b, c) {
+  return 'a=' + a + ',b=' + b + ',c=' + c;
+}
+var test1_3 = partialAny(test, 1, undefined, 3);
+console.log(test1_3(5)); // a=1,b=5,c=3
+
+let objForJson = {
+  Name: "Alex",
+  Surname: "Buchko",
+  Perdet() {
+    return this.kek + this.meme;
+  }
+}
+console.log(JSON.stringify(objForJson));
+console.clear();
+
+console.log(Number("а".charCodeAt(0)).toString(2));
+console.log(Number("а".charCodeAt(0)).toString(2));
+console.log(String.fromCharCode(((Number("а".charCodeAt(0)) ^ Number("ё".charCodeAt(0))))));
+
+function f(i) {
+  let value = i++;
+
+  return function () {
+    return value;
+  };
+}
+
+// три функции в массиве, каждая из них ссылается на лексическое окружение
+// из соответствующего вызова f()
+let f1 = f(1);
+let f2 = f(1);
+let f3 = f(1);
+console.log(f1(), f2(), f3());
+console.log(f1(), f2(), f3());
+console.log(f1(), f2(), f3());
+let str = "Kel";
+str.smth = 4;
+console.log(str.smth);
+console.clear();
+
+function Shape(x, y) {
+  this.x = x;
+  this.y = y;
+  this.getX = function () {
+    return this.x;
+  }
+  this.getY = function () {
+    return this.y;
+  }
+}
+
+function Rectangle(x, y, width, height) {
+  Shape.apply(this, [x, y]);
+  this.width = width;
+  this.height = height;
+  this.getWidth = function () {
+    return this.width;
+  }
+  this.getHeight = function () {
+    return this.height;
+  }
+  this.intersects = function (anotherRectangle) {
+    if (!anotherRectangle instanceof Rectangle) return "Type error";
+    let left = Math.max(this.x + this.width, anotherRectangle.x + this.width);
+    let top = Math.min(this.y + this.height, anotherRectangle.y + anotherRectangle.height);
+    let right = Math.min(this.x, anotherRectangle.x);
+    let bottom = Math.max(this.y, anotherRectangle.y);
+    let width = right - left;
+    let height = top - bottom;
+    if(width < 0 || height < 0){
+      return false;
+    }
+    return true;
+  }
+}
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+
+function Square(x, y, size){
+  Rectangle.apply(this, [x, y, size, size]);
+}
+Square.prototype = Object.create(Rectangle.prototype);
+Square.prototype.constructor = Square;
+
+
+var squareOne = new Square(0, 0, 20);
+var squareTwo = new Square(5, 5, 10);
+
+console.log(squareOne.intersects(squareTwo));
+console.clear();
+
+function adder(n) {
+  let result = n;
+  function inner(m) {
+    if (m == undefined) return result;
+    result += m; 
+    return inner;
+  }
+  inner.__proto__.toString = function meme(){
+      return result;
+  }
+  return inner;
+  // Write your code here
+}
+
+
+console.log(adder(1)(1));

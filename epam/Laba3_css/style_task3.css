@@ -1,0 +1,11 @@
+[href^='http']{
+    color: #4CAF50;
+}
+[href$='google.com']{
+    color: #666;
+}
+[target='_blank']::after{
+    content: '\21F1';
+    display: inline-block;
+    transform: translate(5px) rotate(90deg);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Laba 9 svg</title>
+</head>
+
+<body>
+	<svg width="400" height="1100">
+		<rect width="400" height="150" fill="blue" />
+		<rect y="150" width="400" height="150" fill="yellow" />
+		<symbol id="britain">
+			<rect y="320" width="400" height="250" fill="rgb(0, 16, 109)" />
+			<line x1="0" y1="320" x2="400" y2="570" stroke="#fff" stroke-width="45" />
+			<line x1="400" y1="320" x2="0" y2="570" stroke="#fff" stroke-width="45" />
+			<line x2="170" stroke="red" stroke-width="16" x1="-11" y2="438" y1="322" />
+			<line stroke="red" stroke-width="16" x2="173" y2="457" y1="310" x1="403" />
+			<line stroke="red" stroke-width="16" x2="190" y2="457" y1="578" x1="0" />
+			<line stroke="red" stroke-width="16" x2="232" y2="457" y1="578" x1="426" />
+			<line x1="0" y1="310" x2="410" y2="310" stroke-width="20" stroke="#fff" />
+			<line x1="0" y1="580" x2="400" y2="580" stroke-width="20" stroke="#fff" />
+			<line x1="200" y1="320" x2="200" y2="570" stroke="#fff" stroke-width="80" />
+			<line x1="0" y1="445" x2="400" y2="445" stroke="#fff" stroke-width="80" />
+			<line x1="200" y1="320" x2="200" y2="570" stroke="red" stroke-width="50" />
+			<line x1="0" y1="445" x2="400" y2="445" stroke="red" stroke-width="50" />
+		</symbol>
+		<use href="#britain"></use>
+
+		<rect y="595" width="400" height="250" fill="rgb(0, 16, 109)" />
+		<use href="#britain" y="870" transform="scale(0.5)"></use>
+		<line y1="730" x2="200" y2="730" stroke="rgb(0, 16, 109)" stroke-width="20" />
+
+		<symbol id="star">
+			<polygon points="70,2 87,47 132,48 96,78 111,126 70,100 29,126 42,76 5,48 51,47" fill="red" stroke="#fff"
+				stroke-width="9" />
+		</symbol>
+		<use href="#star" x="1120" y="2520" transform="scale(0.25)"></use>
+		<use href="#star" x="1500" y="3050" transform="scale(0.22)"></use>
+		<use href="#star" x="920" y="2750" transform="scale(0.25)"></use>
+		<use href="#star" x="1120" y="3100" transform="scale(0.25)"></use>
+
+		<symbol id="asterisk">
+			<polygon points="65,2 80,38 120,20 92,57 132,75 92,82 100,124 67,90 35,124 42,82 5,76 40,57 10,20 53,38"
+				fill="#fff" stroke-width="9" />
+		</symbol>
+		<symbol id="white__star">
+			<polygon points="70,2 87,47 132,48 96,78 111,126 70,100 29,126 42,76 5,48 51,47" fill="#fff" stroke="#fff"
+				stroke-width="9" />
+		</symbol>
+		<rect y="870" width="400" height="250" fill="rgb(0, 16, 109)" />
+		<use href="#britain" y="1420" transform="scale(0.5)"></use>
+		<line y1="1004" x2="200" y2="1004" stroke="rgb(0, 16, 109)" stroke-width="20" />
+		<use href="#asterisk" x="155" y="2280" transform="scale(0.45)"></use>
+		<use href="#asterisk" x="1125" y="3590" transform="scale(0.25)"></use>
+		<use href="#asterisk" x="1320" y="3780" transform="scale(0.25)"></use>
+		<use href="#asterisk" x="940" y="3860" transform="scale(0.25)"></use>
+		<use href="#asterisk" x="1125" y="4210" transform="scale(0.25)"></use>
+		<use href="#white__star" x="2390" y="7620" transform="scale(0.13)"></use>
+	</svg>
+</body>
+
+</html>

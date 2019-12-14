@@ -1,0 +1,191 @@
+body{
+    background-color: rgb(31, 5, 39);
+}
+.wrapper{
+    white-space: nowrap;
+    text-align: center;
+}
+header h1{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 45px;
+    background-image: url(images/giphy.gif);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 100px;
+}
+label{
+    display: inline-block;
+    width: 250px;
+    position: relative;
+}
+.wrapper img{
+    width: 250px;
+}
+input{
+    display: none;
+}
+label[for="l1"]{
+    left: 100px;
+    z-index: 7;
+}
+label[for="l2"]{
+    left: 0px;
+    z-index: 6;
+}
+label[for="l3"]{
+    left: -100px;
+    z-index: 5;
+}
+label[for="l4"]{
+    left: -200px;
+    z-index: 4;
+}
+label[for="l5"]{
+    left: -300px;
+    z-index: 3;
+}
+label[for="l6"]{
+    left: -400px;
+    z-index: 2;
+}
+label[for="l7"]{
+    left: -500px;
+    z-index: 1;
+}
+#l1:checked ~ label[for="l1"]{
+    z-index: 7;
+}
+#l1:checked ~ label #second, #l1:checked ~ label #third,#l1:checked ~ label #fourth,#l1:checked ~ label #fifth,#l1:checked ~ label #sixth,#l1:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l1:checked ~ label[for="l1"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l2:checked ~ label[for="l2"]{
+    z-index: 7;
+}
+#l2:checked ~ label #third,#l2:checked ~ label #fourth,#l2:checked ~ label #fifth,#l2:checked ~ label #sixth,#l2:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l2:checked ~ label[for="l2"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l2:checked ~ label #first{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l3:checked ~ label[for="l3"]{
+    z-index: 7;
+}
+#l3:checked ~ label #fourth,#l3:checked ~ label #fifth,#l3:checked ~ label #sixth,#l3:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l3:checked ~ label[for="l3"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l3:checked ~ label #second{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l3:checked ~ label #first{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l3:checked ~ label[for="l1"]{
+    z-index: 1;
+}
+#l4:checked ~ label[for="l4"]{
+    z-index: 7;
+}
+#l4:checked ~ label #fifth,#l4:checked ~ label #sixth,#l4:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l4:checked ~ label[for="l4"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l4:checked ~ label #first ,#l4:checked ~ label #second,
+#l4:checked ~ label #third{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l4:checked ~ label[for="l1"],
+#l4:checked ~ label[for="l2"],
+#l4:checked ~ label[for="l3"]{
+    z-index: 1;
+}
+#l5:checked ~ label[for="l5"]{
+    z-index: 7;
+}
+#l5:checked ~ label #sixth,#l5:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l5:checked ~ label[for="l5"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l5:checked ~ label #first ,#l5:checked ~ label #second,
+#l5:checked ~ label #third, #l5:checked ~ label #fourth{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l5:checked ~ label[for="l1"],
+#l5:checked ~ label[for="l2"],
+#l5:checked ~ label[for="l3"],
+#l5:checked ~ label[for="l4"]
+{
+    z-index: 1;
+}
+#l6:checked ~ label[for="l6"]{
+    z-index: 7;
+}
+#l6:checked ~ label #seventh{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l6:checked ~ label[for="l6"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l6:checked ~ label #first ,#l6:checked ~ label #second,
+#l6:checked ~ label #third, #l6:checked ~ label #fourth,
+#l6:checked ~ label #fifth{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l6:checked ~ label[for="l1"],
+#l6:checked ~ label[for="l2"],
+#l6:checked ~ label[for="l3"],
+#l6:checked ~ label[for="l4"],
+#l6:checked ~ label[for="l5"]
+{
+    z-index: 1;
+}
+#l7:checked ~ label[for="l7"]{
+    z-index: 7;
+}
+#l7:checked ~ label img{
+    transform: perspective(450px) rotateY(-40deg);
+}
+#l7:checked ~ label[for="l7"] img{
+    animation: turn 0.5s;
+    animation-fill-mode: forwards;
+}
+#l7:checked ~ label #first ,#l7:checked ~ label #second,
+#l7:checked ~ label #third, #l7:checked ~ label #fourth,
+#l7:checked ~ label #fifth, #l7:checked ~ label #sixth{
+    transform: perspective(450px) rotateY(40deg);
+}
+#l7:checked ~ label[for="l1"],
+#l7:checked ~ label[for="l2"],
+#l7:checked ~ label[for="l3"],
+#l7:checked ~ label[for="l4"],
+#l7:checked ~ label[for="l5"],
+#l7:checked ~ label[for="l6"]
+{
+    z-index: 1;
+}
+@keyframes turn{
+    to{
+        transform-style: preserve-3d;
+        transform:  perspective(0) rotateY(0);
+        transform: scale(1.2);
+    }
+} 

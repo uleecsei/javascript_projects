@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Laba 9 svg/canvas</title>
+</head>
+
+<body>
+	<canvas id="canvas" width="400" height="1100">
+	</canvas>
+	<script>
+		let cx = document.querySelector("canvas").getContext("2d");
+		cx.fillStyle = "blue";
+		cx.fillRect(0, 0, 400, 150);
+		cx.fillStyle = "yellow";
+		cx.fillRect(0, 150, 400, 150);
+		cx.fillStyle = "rgb(0, 16, 109)";
+		cx.fillRect(0, 320, 400, 250);
+
+		cx.beginPath();
+		cx.moveTo(0, 320);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "45";
+		cx.lineTo(400, 570);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(400, 320);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "45";
+		cx.lineTo(0, 570);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(-11, 322);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "16";
+		cx.lineTo(170, 438);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(403, 310);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "16";
+		cx.lineTo(173, 457);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 578);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "16";
+		cx.lineTo(190, 457);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(426, 578);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "16";
+		cx.lineTo(232, 457);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(200, 320);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "80";
+		cx.lineTo(200, 570);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 445);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "80";
+		cx.lineTo(400, 445);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(200, 320);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "50";
+		cx.lineTo(200, 570);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 445);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "50";
+		cx.lineTo(400, 445);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 310);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "20";
+		cx.lineTo(410, 310);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 580);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "20";
+		cx.lineTo(410, 580);
+		cx.stroke();
+
+		cx.fillStyle = "rgb(0, 16, 109)";
+		cx.fillRect(0, 595, 400, 250);
+
+		cx.beginPath();
+		cx.moveTo(0, 590);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "22.5";
+		cx.lineTo(180, 720);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(176, 585);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "22.5";
+		cx.lineTo(-9, 704);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(-15, 585);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(70, 647);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(170, 585);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(80, 640);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(-3, 704);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(94, 640);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(97, 655);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(185, 718);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(80, 595);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "40";
+		cx.lineTo(80, 710);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 645);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "40";
+		cx.lineTo(180, 645);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(80, 595);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "25";
+		cx.lineTo(80, 710);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 645);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "25";
+		cx.lineTo(180, 645);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 720);
+		cx.strokeStyle = "rgb(0, 16, 109)";
+		cx.lineWidth = "20";
+		cx.lineTo(195, 720);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 585);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "20";
+		cx.lineTo(410, 585);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 720);
+		cx.strokeStyle = "rgb(0, 16, 109)";
+		cx.lineWidth = "20";
+		cx.lineTo(195, 720);
+		cx.stroke();
+
+		cx.fillStyle = "rgb(0, 16, 109)";
+		cx.fillRect(0, 870, 400, 250);
+
+		cx.beginPath();
+		cx.moveTo(0, 865);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "22.5";
+		cx.lineTo(180, 995);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(176, 860);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "22.5";
+		cx.lineTo(-9, 979);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(-15, 860);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(70, 922);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(170, 860);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(80, 915);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(-3, 979);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(94, 915);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(97, 930);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "7";
+		cx.lineTo(185, 993);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(80, 860);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "40";
+		cx.lineTo(80, 985);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 920);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "40";
+		cx.lineTo(180, 920);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(80, 860);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "25";
+		cx.lineTo(80, 985);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 920);
+		cx.strokeStyle = "red";
+		cx.lineWidth = "25";
+		cx.lineTo(180, 920);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 995);
+		cx.strokeStyle = "rgb(0, 16, 109)";
+		cx.lineWidth = "20";
+		cx.lineTo(195, 995);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(0, 860);
+		cx.strokeStyle = "#fff";
+		cx.lineWidth = "20";
+		cx.lineTo(410, 860);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(175, 870);
+		cx.strokeStyle = "rgb(0, 16, 109)";
+		cx.lineWidth = "30";
+		cx.lineTo(175, 1000);
+		cx.stroke();
+
+		cx.beginPath();
+		cx.moveTo(175, 595);
+		cx.strokeStyle = "rgb(0, 16, 109)";
+		cx.lineWidth = "30";
+		cx.lineTo(175, 725);
+		cx.stroke();
+
+		let x = [-5, 48, -5, -70, 20];
+		let y = [0, 38, 150, 60, 363];
+		for (let i = 0; i < 5; i++) {
+			cx.beginPath();
+			cx.strokeStyle = "#fff";
+			cx.lineWidth = "2";
+			cx.moveTo(282 + x[i], 620 + y[i]);
+			cx.lineTo(285 + x[i], 630 + y[i]);
+			cx.lineTo(295 + x[i], 630 + y[i]);
+			cx.lineTo(287 + x[i], 636 + y[i]);
+			cx.lineTo(291 + x[i], 647 + y[i]);
+			cx.lineTo(283 + x[i], 641 + y[i]);
+			cx.lineTo(276 + x[i], 647 + y[i]);
+			cx.lineTo(278 + x[i], 636 + y[i]);
+			cx.lineTo(270 + x[i], 630 + y[i]);
+			cx.lineTo(279 + x[i], 630 + y[i]);
+			cx.closePath();
+			cx.fillStyle = "red";
+			if (i == 4) { cx.fillStyle = "#fff"; }
+			cx.fill();
+			cx.stroke();
+		}
+
+		let i = 0;
+		let x1 = [0, 0, 60, -65];
+		let y1 = [273, 410, 315, 340];
+		for (let i = 0; i < 4; i++) {
+			cx.beginPath();
+			cx.strokeStyle = "#fff";
+			cx.lineWidth = "2";
+			cx.moveTo(281 + x1[i], 619 + y1[i]);
+
+			cx.lineTo(286 + x1[i], 631 + y1[i]);
+			cx.lineTo(300 + x1[i], 628 + y1[i]);
+			cx.lineTo(290 + x1[i], 639 + y1[i]);
+			cx.lineTo(303 + x1[i], 645 + y1[i]);
+			cx.lineTo(290 + x1[i], 648 + y1[i]);
+			cx.lineTo(294 + x1[i], 660 + y1[i]);
+			cx.lineTo(282 + x1[i], 654 + y1[i]);
+			cx.lineTo(271 + x1[i], 660 + y1[i]);
+			cx.lineTo(274 + x1[i], 648 + y1[i]);
+			cx.lineTo(262 + x1[i], 645 + y1[i]);
+			cx.lineTo(273 + x1[i], 639 + y1[i]);
+			cx.lineTo(263 + x1[i], 628 + y1[i]);
+			cx.lineTo(275 + x1[i], 631 + y1[i]);
+			cx.closePath();
+			cx.fillStyle = "#fff";
+			cx.fill();
+			cx.stroke();
+		}
+
+	</script>
+</body>
+
+</html>

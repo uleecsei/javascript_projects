@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lab2_task1_html</title>
+</head>
+<body>
+	<form>
+		<label for="name">Name</label>
+		<br>
+		<input id="name" type="text" required placeholder="Your Name">
+		<br>
+		<br>
+		<label for="email">Email</label>
+		<br>
+		<input id="email" type="email" required placeholder="Your email">
+		<p>Sex</p>
+		<input id="radio1" type="radio" name="sex" checked>
+		<label for="radio1">Male</label>
+		<input id="radio2" type="radio" name="sex">
+		<label for="radio2">Female</label>
+		<p>Current status</p>
+		<input id="ch1" type="checkbox">
+		<label for="ch1">Student</label>
+		<br>
+		<input id="ch2" type="checkbox">
+		<label for="ch2">Employed</label>
+		<br>
+		<input id="ch3" type="checkbox">
+		<label for="ch3">Unemployed</label>
+		<br>
+		<br>
+		<label for="date">Birthday</label>
+		<br>
+		<input id="date" type="date" required>
+		<p>Skills and Technologies</p>
+		<select name="skills" multiple style="height: 160px;">
+			<optgroup label="Tech_skills">
+				<option value="t1">HTML</option>
+				<option value="t2">CSS</option>
+				<option value="t3">Javascript</option>
+				<option value="t4">ASP.NET</option>
+				<option value="t5">PHP</option>
+			</optgroup>
+			<optgroup label="Soft_skills">
+				<option value="s1">Time management</option>
+				<option value="s2">Proactivity</option>
+				<option value="s3">Teamwork</option>
+				<option value="s4">Leadership</option>
+			</optgroup>
+		</select>
+		<br>
+		<br>
+		<label for="image">Photo</label>
+		<br>
+		<input type="file" id="image" accept="image/x-png,image/gif,image/jpeg">
+		<br>
+		<p>Comments</p>
+		<textarea name="comments" cols="30" rows="10"></textarea>
+		<br>
+		<br>
+		<input type="submit">
+		<input type="reset">
+		<br>
+	</form>
+</body>
+</html>

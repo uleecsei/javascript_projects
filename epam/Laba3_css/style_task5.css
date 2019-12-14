@@ -1,0 +1,51 @@
+input{
+    display: none;
+}
+span{
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+}
+label{
+    text-decoration: underline;
+    margin: 5px;
+}
+[for='red']{
+    color: red;
+    opacity: 1;
+}
+#red:checked ~ [for='red']{
+    opacity: 0.4;    
+}
+[for='green']{
+    color: green;
+    opacity: 1;
+}
+#green:checked ~ [for='green']{
+    opacity: 0.4;    
+}
+[for='blue']{
+    color: blue;
+    opacity: 1;
+}
+#blue:checked ~ [for='blue']{
+    opacity: 0.4;    
+}
+.red{
+    background-color:red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+#red:checked ~ .red{
+    display: none;
+}
+#green:checked ~ .green{
+    display: none;
+}
+#blue:checked ~ .blue{
+    display: none;
+}

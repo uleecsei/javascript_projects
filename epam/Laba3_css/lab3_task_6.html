@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab3_task6_css</title>
+    <link rel="stylesheet" href="style_task6.css">
+</head>
+<body>      
+        <input type="checkbox" id="weekdays">
+        <label for="weekdays">Тільки будні</label>
+        <input type="checkbox" id="firsthalf">
+        <label for="firsthalf">Перша половина дня</label>
+        <input type="checkbox" id="doctor">
+        <label for="doctor">Лікар</label>
+        <br>
+        <input type="checkbox" id="weekends">
+        <label for="weekends">Тільки вихідні</label>
+        <input type="checkbox" id="secondhalf">
+        <label for="secondhalf">Друга половина дня</label>
+        <input type="checkbox" id="luxdoctor">
+        <label for="luxdoctor">Лікар вищої категорії</label>
+        <br>
+    <table>        
+        <tr>
+            <th>ПІБ лікаря</th>
+            <th>Спеціальність</th>
+            <th>Рівень</th>
+            <th>Номер кабінету</th>
+            <th>Години прийому</th>
+        </tr>
+        <tr class="weekdays secondhalf luxdoctor">
+            <td>Cмірнов І.В.</td>
+            <td class="first">Лікар-терапевт</td>
+            <td>Лікар вищої категорії</td>
+            <td>120 кб.</td>
+            <td>Пн-Пт 14:00-18:00</td>
+        </tr>
+        <tr class="weekdays firsthalf doctor">
+            <td>Василенко Є.П.</td>
+            <td class="first">Лікар-терапевт</td>
+            <td>Лікар</td>
+            <td>120 кб.</td>
+            <td>Пн-Пт 9:00-14:00</td>
+        </tr>
+        <tr class="weekdays firsthalf luxdoctor">
+            <td>Котик О.П.</td>
+            <td>Хірург</td>
+            <td>Лікар вищої категорії</td>
+            <td>327 кб.</td>
+            <td>Пн-Пт 9:00-14:00</td>
+        </tr>
+        <tr class="weekends secondhalf doctor">
+            <td>Сігайова О.А.</td>
+            <td>Педіатр</td>
+            <td>Лікар</td>
+            <td>405 кб.</td>
+            <td>Cб,Вс 14:00-18:00</td>
+        </tr>
+        <tr class="weekends secondhalf luxdoctor">
+            <td>Заєць М.Є.</td>
+            <td>Стоматолог</td>
+            <td>Лікар вищої категорії</td>
+            <td>108 кб.</td>
+            <td>Cб,Вс 14:00-18:00</td>
+        </tr>
+    </table>
+    <form action="#">
+
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" pattern="\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="(067)000-00-00">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@mail.com">
+        <br>
+        <input type="submit" id="submit" value="Надіслати дані та телефон">
+    </form>
+</body>
+</html>

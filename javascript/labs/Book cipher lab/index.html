@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Book cipher</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+	<style>
+		*{
+ 		   font-family: 'Playfair Display', serif;
+ 		   font-size: 45px;
+ 		   color: #505dffd6;
+		   text-align: center;
+
+		}
+		h1{
+			margin: 0 auto;
+			font-family: 
+		}
+		#wrapper{
+			margin: 0 auto;
+			width: 100%;
+			height: 1000px;
+			background-color: #f2ffb6d6;
+		}
+		p{
+			font-size: 25px;
+			margin-bottom: 5px;
+		}
+		#key{
+			height: 30px;
+			width: 300px;
+			text-align: left;
+			font-size: 0.6em;
+		}
+		#text{
+			height: 470px;
+			width: 550px;
+			text-align: left;
+			font-size: 0.6em;
+		}
+		label{
+			color: black;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">	
+		<h1>Книжный шифр</h1>
+		<p>Введите ключ для шифровки:</p>
+		<textarea name="poem" id="text" cols="30" rows="30">Никогда никому не завидуй,
+Ни деньгам, ни овалу лица,
+За хорошим бывает не видно,
+Что скрывают за дверью сердца.
+Не завидуй улыбке открытой,
+Не сердись сгоряча на судьбу,
+Ты не знаешь, как плакал навзрыд он,
+Как улыбка досталась ему.
+Не завидуй любви, если двое
+Вместе за руки взявшись идут,
+Неизвестно до этого сколько,
+Они горя тащили хомут.
+</textarea>
+		<p>Введите слово для шифровки:</p>
+		<input id ="key" type="text"><br>
+		
+	</div>
+
+	<script src="BIS-3.js"></script>
+</body>
+</html>

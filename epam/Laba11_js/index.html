@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Laba 11 JS</title>
+</head>
+
+<body>
+	<script>
+		//Task 1
+		//******************************************************************************
+		let x = prompt("Введите значение:", "");
+		x = parseFloat(x);
+		document.write(x / (x ** 3 + (0.1 / (x ** 3 + 0.01 / (x ** 3 + 0.001)))));
+		document.write("<br>");
+		//Task 2
+		//******************************************************************************
+		let a = parseInt(prompt("Введите a:", 0));
+		let b = parseInt(prompt("Введите b:", 0));
+		let c = parseInt(prompt("Введите c:", 0));
+		if ((a > b || a > c) && (a <= b || a <= c)) {
+			document.write(a);
+		}
+		else if ((b > c || b > a) && (b <= a || b <= c)) {
+			document.write(b);
+		}
+		else {
+			document.write(c);
+		}
+		document.write("<br>");
+		//Task 3
+		//******************************************************************************
+		let n = parseInt(prompt("Введите n", 0));
+		let row = "";
+		document.write("<br>");
+		for (let i = 0; i < n; i++) {
+			row += "#";
+			document.write(row + "<br>");
+		}
+		document.write("<br>");
+		//Task 4
+		//******************************************************************************
+		let n1 = parseInt(prompt("Введите n задание 4", 0));
+		let row1 = "";
+		let resRow = "";
+		let spaces = "";
+		for (let i = 0; i < n1 - 1; i++) {
+			spaces += " ";
+		}
+		for (let i = 1; i < n1 + 1; i++) {
+			row1 = spaces + "#";
+			resRow += "#";
+			document.write("<pre>" + row1 + resRow.slice(1) + " " + resRow + "<br>" + "</pre>");
+			spaces = spaces.slice(1);
+		}
+		document.write("<br>");
+		//Task 5
+		//******************************************************************************
+		let sum = parseFloat(prompt("Введите сумму денег", 0));
+		let count = 0;
+		sum = Math.round(sum * 100);
+		while (sum > 0) {
+			if (sum / 25 >= 1) {
+				sum -= 25;
+				count++;
+			}
+			else if (sum / 10 >= 1) {
+				sum -= 10;
+				count++;
+			}
+			else if (sum / 5 >= 1) {
+				sum -= 5;
+				count++;
+			}
+			else {
+				sum -= 1;
+				count++;
+			}
+		}
+		document.write(count);
+		document.write("<br>");
+		//Task 6
+		//******************************************************************************
+		let card = parseInt(prompt("Введите номер карты:", 0));
+		let cardNum = card;
+		let lengthCounter = 0;
+		let isAmex, isVisa, isMaster;
+		while (card >= 1) {
+			card /= 10;
+			lengthCounter++;
+		}
+		card = Math.floor(card * 100);
+		if (lengthCounter == 15) {
+			if (card == 34 || card == 37) {
+				isAmex = true;
+			}
+		}
+		else if (lengthCounter == 13) {
+			if (Math.floor(card / 10) == 4) {
+				isVisa = true;
+			}
+		}
+		else if (lengthCounter == 16) {
+			if (Math.floor(card / 10) == 4) {
+				isVisa = true;
+			}
+			else if (card == 51 || card == 52 || card == 53 || card == 54 || card == 55) {
+				isMaster = true;
+			}
+		}
+		if (isAmex || isVisa || isMaster) {
+			let counter = 0;
+			let sum = 0;
+			while (cardNum >= 1) {
+				counter++;
+				if (counter % 2 == 0) {
+					let multiple = Math.floor(cardNum) % 10 * 2;
+					if (multiple > 9) {
+						let temp = multiple % 10;
+						multiple = Math.floor(multiple / 10);
+						sum += temp + multiple;
+					}
+					else {
+						sum += multiple;
+					}
+				}
+				else {
+					sum += Math.floor(cardNum) % 10;
+				}
+				cardNum /= 10;
+			}
+			if (sum % 10 == 0) {
+				if (isAmex) {
+					document.write("AMEX");
+				}
+				else if (isVisa) {
+					document.write("VISA");
+				}
+				else if (isMaster) {
+					document.write("MASTERCARD");
+				}
+			}
+			else {
+				document.write("INVALID");
+			}
+		}
+		else {
+			document.write("INVALID");
+		}
+		document.write("<br>");
+		//Task 7
+		//******************************************************************************
+		let arr = prompt("Введите элементы массива через пробел", 0).split(' ').map((elem) => elem = parseInt(elem));
+		let min = max = arr[0];
+		let minPos, maxPos;
+		for (let i = 1; i < arr.length; i++) {
+			if (arr[i] > max) {
+				max = arr[i];
+				maxPos = i;
+			}
+			if (arr[i] < min) {
+				min = arr[i];
+				minPos = i;
+			}
+		}
+		if (minPos % 2 == 0 && maxPos % 2 == 0 && maxPos > 1) {
+			let temp = arr[maxPos - 1];
+			arr[maxPos - 1] = arr[maxPos];
+			arr[maxPos] = temp;
+		}
+		else {
+			if (arr.length % 2 == 0) {
+				for (let i = 0; i < arr.length / 2; i++) {
+					let temp = arr[i];
+					arr[i] = arr[arr.length - i - 1];
+					arr[arr.length - i - 1] = temp;
+				}
+			}
+			else {
+				for (let i = 0; i < Math.round(arr.length / 2) - 1; i++) {
+					let temp = arr[i];
+					arr[i] = arr[arr.length - i - 1];
+					arr[arr.length - i - 1] = temp;
+				}
+			}
+		}
+		document.write("Исходный массив: " + arr);
+		document.write("<br>");
+		//Task 8
+		//******************************************************************************
+		let N = parseInt(prompt("Введите значение N:", 0));
+		let M = parseInt(prompt("Введите значение M:", 0));
+		let isAuto = confirm("Заполнить массив случайными числами?");
+		let B = new Array(N);
+		if (isAuto) {
+			document.write("<table border='2px solid black'>");
+			for (let i = 0; i < N; i++) {
+				document.write("<tr>");
+				B[i] = new Array(M);
+				for (let j = 0; j < M; j++) {
+					document.write("<td>");
+					B[i][j] = Math.floor(Math.random() * 100);
+					document.write(B[i][j]);
+					document.write("</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		}
+		else {
+			for (let i = 0; i < N; i++) {
+				B[i] = new Array(M);
+				for (let j = 0; j < M; j++) {
+					B[i][j] = prompt(`Введите число на позицию [${i}][${j}]:`);
+				}
+			}
+			document.write("<table border='2px solid black'>");
+			for (let i = 0; i < N; i++) {
+				document.write("<tr>");
+				for (let j = 0; j < M; j++) {
+					document.write("<td>");
+					document.write(B[i][j]);
+					document.write("</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>")
+		}
+		let minElemArr = [];
+		for (let j = 0; j < M; j++) {
+			let min = B[0][j];
+			for (let i = 1; i < N; i++) {
+				if (B[i][j] < min) {
+					min = B[i][j];
+				}
+			}
+			minElemArr.push(min);
+		}
+		document.write("<br>");
+		document.write("<table border='2px solid black'><tr>");
+		for (let i = 0; i < M; i++) {
+			document.write("<td>");
+			document.write(minElemArr[i]);
+			document.write("</td>");
+		}
+		document.write("</tr></table>");
+	</script>
+</body>
+
+</html>

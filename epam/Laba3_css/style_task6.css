@@ -1,0 +1,92 @@
+ body{
+    text-align: center;
+}
+table{
+    font-family: Arial, Helvetica, sans-serif;;
+    margin: 0 auto;
+    width: 1200px;
+    height: 300px;
+    border: black 2px solid ;
+    border-spacing: 0;
+    overflow: hidden;
+}
+td{
+    border: black 2px solid;
+    width: 20%;
+    height: 50px;
+    padding-left: 10px;
+}
+td:first-child{
+    text-align: start;
+}
+th{
+    background-color:rgb(0, 100, 214);
+    border: black 2px solid;
+    width: 20%;
+    height: 50px;
+}
+/* tr:nth-child(even){
+    background:rgb(199, 237, 252);
+} */
+tr:hover{
+    background-color: rgb(202, 29, 101);
+} 
+input{
+    margin: 10px;
+}
+[for='email']{
+    margin-left: 21px;
+}
+#phone:placeholder-shown ~ #submit{
+    display: none;
+}
+#phone:invalid ~ #submit{
+    display: none;
+}
+#email:placeholder-shown ~ #submit{
+    display: none;
+}
+#email:invalid ~ #submit{
+    display: none;
+}
+p{
+    margin-left: 350px;
+}
+#weekdays:checked ~ table tr:not(.weekdays){
+    display: none;
+}
+#weekends:checked ~ table tr:not(.weekends){
+    display: none;
+}
+#firsthalf:checked ~ table tr:not(.firsthalf){
+    display: none;
+}
+#secondhalf:checked ~ table tr:not(.secondhalf){
+    display: none;
+}
+#doctor:checked ~ table tr:not(.doctor){
+    display: none;
+}
+#luxdoctor:checked ~ table tr:not(.luxdoctor){
+    display: none;
+}
+table tr:first-child{
+    display: table-row !important;
+}
+td,th{
+    position: relative;
+}
+th{
+    z-index: 2;
+}
+td:hover::after{
+  content: "";
+  position: absolute;
+  background-color: rgb(202, 29, 101);
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
