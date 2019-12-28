@@ -1,9 +1,26 @@
 window.onload = function () {
-    let orders = JSON.parse(localStorage.getItem('Orders'));
-    orders.forEach((elem) => {
-        createRow(elem);
+    getData('http://localhost:5000/api/Orders/').then((elements) => {
+        localStorage.setItem('Orders', elements);
     });
+    getData('http://localhost:5000/api/Warehouses/').then((elements) => {
+        localStorage.setItem('Warehouses', elements);
+    });
+    let elements = JSON.parse(localStorage.getItem('Warehouses'));
+    elements.forEach((elem) => {
+        elem.Goods.forEach((el) => {
+            createRow(el.Goods.Name,el.Quatity);
+        });
+    });
+    addOptionItems(elements);
+}
 
+function addOptionItems(elements) {
+    let select = document.getElementById("ware");
+    elements.forEach((el) => {
+        let node = document.createElement("option");
+        node.innerHTML = el.Name;
+        select.appendChild(node);
+    });
 }
 
 async function getData(url) {
@@ -18,27 +35,15 @@ function createCell(row, value) {
     row.appendChild(t);
 }
 
-function createRow(obj) {
-    console.log(obj.finalDate);
-    if (obj.finalDate != "0001-01-01T00:00:00") {
-        const table = document.getElementById("table").getElementsByTagName("tbody")[0];
-        let row = document.createElement("tr");
-        let date = new Date(obj.finalDate);
-        
-        date = "" + date.getDate() + "." + (date.getMonth() + 1) + "." + date.getUTCFullYear();
-        let date1 = new Date(obj.orderDate);
-        date1 = "" + date1.getDate() + "." + (date1.getMonth() + 1) + "." + date1.getUTCFullYear();
-        createCell(row, obj.id);
-        createCell(row, obj.client.name);
-        createCell(row, obj.client.prodName);
-        createCell(row, obj.goods.name);
-        createCell(row, obj.amount);
-        createCell(row, obj.sum);
-        createCell(row, date1);
-        createCell(row, date);
+function createRow(name, amount) {
+    const table = document.getElementById("table").getElementsByTagName("tbody")[0];
+    let row = document.createElement("tr");
+    // let date = new Date(obj.date);
+    // date = "" + date.getDay() + "." + (date.getMonth() + 1) + "." + date.getUTCFullYear();
+    createCell(row, name);
+    createCell(row, amount);
 
-        table.appendChild(row);
-    }
+    table.appendChild(row);
 }
 
 function sortTableById() {
@@ -73,8 +78,8 @@ function sortTableByGoodsName() {
     const table = document.getElementsByTagName("tr");
     let arr = Array.from(table).slice(1);
     arr = arr.sort(function (a, b) {
-        a = a.childNodes[3].innerHTML;
-        b = b.childNodes[3].innerHTML;
+        a = a.childNodes[0].innerHTML;
+        b = b.childNodes[0].innerHTML;
         if (a > b) {
             return 1;
         }
@@ -171,25 +176,25 @@ function sortTableByCompanyName() {
     }
 }
 
-let sort1 = document.getElementById("sort1");
-sort1.onclick = sortTableById;
+// let sort1 = document.getElementById("sort1");
+// sort1.onclick = sortTableById;
 
 let sort3 = document.getElementById("sort3");
 sort3.onclick = sortTableByGoodsName;
 
-let sort4 = document.getElementById("sort4");
-sort4.onclick = sortTableByOrdererName;
+// let sort4 = document.getElementById("sort4");
+// sort4.onclick = sortTableByOrdererName;
 
-let sort5 = document.getElementById("sort5");
-sort5.onclick = sortTableByOrdererName;
+// let sort5 = document.getElementById("sort5");
+// sort5.onclick = sortTableByOrdererName;
 
-let sort2 = document.getElementById("sort2");
-sort2.onclick = sortTableByDate;
+// let sort2 = document.getElementById("sort2");
+// sort2.onclick = sortTableByDate;
 
-let print = document.getElementById("print");
-print.onclick = function () {
-    window.print();
-}
+// let print = document.getElementById("print");
+// print.onclick = function () {
+//     window.print();
+// }
 let search = document.getElementById("search");
 let searchSubmit = document.getElementById("search-submit");
 
@@ -225,35 +230,37 @@ function isFound(obj, expression) {
     return false;
 }
 
-document.getElementById("ok").onclick = function () {
-    let select = document.getElementById("month");
+
+document.getElementById("ok").onclick = function (event) {
+    let select = document.getElementById("ware");
     const table = document.getElementsByTagName("tr");
     let counter = table.length - 1;
     while (table.length > 1) {
         table[counter].remove();
         counter--;
     }
-    let orders = JSON.parse(localStorage.getItem('Orders'));
-
-    if (select.value != "A") {
-        orders.forEach((elem) => {
-            if (select.value == 'first' && new Date(elem.orderDate).getMonth() < 3) {
-                createRow(elem);
+    let wares = JSON.parse(localStorage.getItem('Warehouses'));
+    let currentWare;
+    if (select.value != "all") {
+        wares.forEach((el) => {
+            if (el.Name == select.value) {
+                currentWare = el.Goods;
             }
-            else if (select.value == 'second' && new Date(elem.orderDate).getMonth() >= 3 && new Date(elem.orderDate).getMonth() < 6) {
-                createRow(elem);
-            }
-            else if (select.value == 'third' && new Date(elem.orderDate).getMonth() >= 6 && new Date(elem.orderDate).getMonth() < 9) {
-                createRow(elem);
-            } 
-            else if (select.value == 'fourth' && new Date(elem.orderDate).getMonth() >= 9 ) {
-                createRow(elem);
-            } 
         });
+            currentWare.forEach((elem) => {
+                createRow(elem.Goods.Name,elem.Quatity);
+            });
     }
     else {
-        orders.forEach((elem) => {
-            createRow(elem);
+        wares.forEach((elem) => {
+            elem.Goods.forEach((el) => {
+                createRow(el.Goods.Name,el.Quatity);
+            });
         });
     }
+}
+async function getData(url) {
+    const response = await fetch(url)
+    const myJson = await response.json();
+    return JSON.stringify(myJson);
 }
