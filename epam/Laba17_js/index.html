@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .block {
+            margin: 15px 100px 15px 20px;
+            height: 70px;
+            width: 400px;
+            text-align: center;
+            background-color: green;
+            border-radius: 5px;
+            padding-top: 40px;
+            font-size: 30px;
+            color: #ffffff;
+            font-family: fantasy;
+        }
+
+        .calc {
+            position: absolute;
+            left: 800px;
+            top: 20px;
+            color: #ffffff;
+            font-size: 40px;
+        }
+
+        #display {
+            width: 200px;
+            height: 40px;
+            background-color: grey;
+            font-size: 1em;
+            color: #ffffff;
+        }
+
+        .keys {
+            width: 60px;
+            height: 60px;
+            background-color: grey;
+            display: inline-block;
+            text-align: center;
+            padding-top: 5px;
+            margin-top: 10px;
+        }
+
+        #list {
+            position: absolute;
+            left: 1050px;
+            top: 20px;
+            list-style: none;
+            color: rgb(87, 84, 84);
+            font-size: 30px;
+            font-family: sans-serif;
+            margin-top: 5px;
+            padding-left: 5px;
+        }
+
+        #text {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">mouseenter</div>
+    <div class="block">mouseout</div>
+    <div class="block">mouseover</div>
+    <div class="block">mousedown</div>
+    <div class="block">mouseup</div>
+    <div class="block">click</div>
+
+    <div class="calc">
+        <input type="text" name="display" id="display" disabled>
+        <div class="keyboard">
+            <div tabindex="1" class="keys">1</div>
+            <div tabindex="2" class="keys">2</div>
+            <div tabindex="3" class="keys">3</div>
+            <br>
+            <div tabindex="4" class="keys">4</div>
+            <div tabindex="5" class="keys">5</div>
+            <div tabindex="6" class="keys">6</div>
+            <br>
+            <div tabindex="7" class="keys">7</div>
+            <div tabindex="8" class="keys">8</div>
+            <div tabindex="9" class="keys">9</div>
+            <br>
+            <div tabindex="10" class="keys">C</div>
+            <div tabindex="11" class="keys">0</div>
+            <div tabindex="12" class="keys">S</div>
+        </div>
+    </div>
+
+    <ul id="list">
+
+    </ul>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
